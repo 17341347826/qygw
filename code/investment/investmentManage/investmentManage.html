@@ -1,0 +1,109 @@
+<div id="investmentManage" class="am-g" ms-important="investmentManage">
+    <!--头部-->
+    <div class="header">
+        <div class="banner" style="height: 166px;background-color: #1e2c6a">
+        </div>
+    </div>
+    <!--内容-->
+    <div class="content">
+        <!--站点地图-->
+        <xmp ms-widget="{is:'ms-ele-title',menuName:'招商',firstPath:'investmentManage',pageName:'>招商管理',pagePath:'investmentManage'}"></xmp>
+        <!--确认弹框-->
+        <div class="am-modal am-modal-confirm" tabindex="-1" id="my-confirm">
+            <div class="am-modal-dialog">
+                <div class="am-modal-hd">{{dialog_title}}</div>
+
+                <div class="am-modal-footer">
+                    <span class="am-modal-btn" ms-click="@onCancel">取消</span>
+                    <span class="am-modal-btn" ms-click="@onConfirm">确定</span>
+                </div>
+            </div>
+        </div>
+        <div ms-visible="!@add_page" id="content_div">
+            <div class="am-scrollable-horizontal">
+                <div style="margin: 25px 0;text-align: right">
+                    <button type="button" class="am-btn am-btn-default am-round am-btn-xs" ms-click="@onIssueModule" style="margin-right: 175px;">发布模块</button>
+                    <button type="button" class="am-btn am-btn-default am-round am-btn-xs" ms-click="@onAddModule('')">新增模块</button>
+                </div>
+
+                <table class="am-table am-table-bordered am-table-centered">
+                    <thead>
+                    <tr>
+                        <th><input id="all_check" ms-click="@onAllCheck" type="checkbox"/>序号</th>
+                        <th>模块名称</th>
+                        <th>模块描述</th>
+                        <th>发布状态</th>
+                        <th>创建时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!--ms-for:($idx,el) in @investmentListInfo-->
+                    <tr ms-visible="investmentListInfo.length">
+                        <td><input ms-attr="{id : @check + $idx}" ms-click="@check_list($event, el, (@check + $idx))" type="checkbox"/>{{$idx + 1}}</td>
+                        <td>{{el.name}}</td>
+                        <td>名称</td>
+                        <td>
+                            <span ms-visible="el.status == -1">无效</span>
+                            <span ms-visible="el.status == 0">未发布</span>
+                            <span ms-visible="el.status == 1">已发布</span>
+                        </td>
+                        <td>{{el.create_time}}</td>
+                        <td>
+                            <ul class="am-avg-sm-3 am-thumbnails">
+                                <li><span ms-click="@onAddModule(el)" style="cursor: pointer">编辑</span></li>
+                                <li><span ms-click="@onRevocation(el)" style="cursor: pointer">撤销</span></li>
+                                <li><span ms-click="@onDelete(el)" style="cursor: pointer">删除</span></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <!--ms-for-end:-->
+                    <tr ms-visible="investmentListInfo.length == 0">
+                        <td colspan="6">
+                            <span>无数据</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <ms-ele-pagination ms-widget="{pageSize:@query_list.page_size,currentPage:@currentPage,total:@total,currentChange:@currentChange}"></ms-ele-pagination>
+            </div>
+        </div>
+
+
+
+        <div ms-visible="@add_page" class="am-scrollable-horizontal system_width">
+
+
+            <h2>{{add_or_update}}</h2>
+            <div class="am-g margin_sx mb_25">
+                <div class="am-u-lg-5">
+                    <div class="am-input-group">
+                        <span class="am-input-group-label">名称: </span>
+                        <input type="text" class="am-form-field" placeholder="" ms-duplex="moduleName">
+                    </div>
+                </div>
+            </div>
+
+
+            <div style="text-align: left" >
+                <p style="font-size: 20px">内容: </p>
+                <!-- 实例化编辑器 -->
+                <div id="summernote" style="margin-bottom: 75px;"></div>
+
+
+
+                <div align="center">
+                    <button type="button" class="am-btn am-btn-default" ms-click="@add_page = false">返回</button>
+                    <span style="margin: 0 75px"></span>
+                    <button type="button" class="am-btn am-btn-primary" ms-click="@onAddConfirm">保存</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!--侧边导航-->
+        <xmp ms-widget="{is:'ms-ele-advice'}"></xmp>
+    </div>
+</div>

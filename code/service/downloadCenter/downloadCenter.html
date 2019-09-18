@@ -1,0 +1,63 @@
+<div id="downloadCenter" class="am-g" ms-important="downloadCenter">
+    <!--头部-->
+    <div class="header">
+        <!-- banner-->
+        <div class="banner" style="width:100%;">
+            <div style="width:100%;" class="slide am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
+                <!--<ul ms-if="!@moduleImage.length" class="am-slides" style="width:100%;">-->
+                    <!--<li style="width:100%;"><img src="../../../common/img/download.png" /></li>-->
+                <!--</ul>-->
+                <ul class="am-slides" style="width:100%;">
+                    <!--ms-for:($idx,el) in @moduleImage-->
+                    <li style="width:100%;cursor: pointer">
+                        <img style="max-height: 900px;width: 100%;" ms-attr="{src: @api + 'file/get?img=' + el.image_url[0].guid}"
+                             ms-click="@gotoPage(el)"/>
+                    </li>
+                    <!--ms-for-end:-->
+                </ul>
+            </div>
+        </div>
+        <!--通知-->
+        <xmp ms-widget="{is:'ms-ele-notice'}"></xmp>
+    </div>
+    <!--内容-->
+    <div class="content">
+        <!--站点地图-->
+        <xmp ms-widget="{is:'ms-ele-title',menuName:'服务',firstPath:'downloadCenter',pageName:'>下载中心',pagePath:'downloadCenter'}"></xmp>
+        <div id="down_div">
+            <div style="height: 30pt;">
+                <div class="am-input-group" style="float: right;">
+                    <input type="text" id="down_title_input" class="down_title_input" ms-change="@queryDownInfo"
+                           ms-duplex="down_title" ms-on-blur="@queryDownByTitle" ms-on-focus="focusDownTitle">
+                    <span class="am-input-group-label down_title_span"><span class="down_title_img"></span></span>
+                </div>
+
+            </div>
+            <!--ms-for:($index,item) in @productList-->
+            <div ms-visible="item.pageShow">
+                <p>{{item.product_name}}</p>
+                <ul id="down_ul">
+                    <!--ms-for:($idx,el) in @downloadList-->
+                    <li ms-visible="el.product_info.id === item.id">
+                       <div>
+                           <img ms-visible="el.product_name === 'pdf'" src="../../../common/img/icon_pdt.png" alt="">
+                           <img ms-visible="el.product_name === 'word'" src="../../../common/img/icon_word.png" alt="">
+                           <img ms-visible="el.product_name === 'zip'" src="../../../common/img/icon_zip.png" alt="">
+                       </div>
+                        <div style="text-align: left;height: 20pt;width: 80%;margin-left: 16pt;display: inline-block;overflow:hidden;" class="c_span">
+                            <span class="c_span"></span>
+                            {{el.file_name}}
+                            ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                        </div>
+                        <a ms-click="@onDownload(el)" style="float: right;"><i class="am-icon-cloud-download" ms-click="@onDownload(el)"> 下载</i></a>
+                    </li>
+                    <!--ms-for-end:-->
+                </ul>
+            </div>
+            <!--ms-for-end:-->
+        </div>
+
+        <!--侧边导航-->
+        <xmp ms-widget="{is:'ms-ele-advice'}"></xmp>
+    </div>
+</div>

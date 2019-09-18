@@ -1,0 +1,115 @@
+<div class="am-g" id="uptangIntro" ms-important="uptangIntro">
+    <!--头部-->
+    <div class="header">
+        <!-- banner-->
+        <div class="banner" style="width:100%;">
+            <div style="width:100%;" class="slide am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
+                <!--<ul ms-if="!@moduleImage.length" class="am-slides" style="width:100%;">-->
+                    <!--<li style="width:100%;"><img src="../../../common/img/intr_banner.jpg" /></li>-->
+                <!--</ul>-->
+                <ul class="am-slides" style="width:100%;">
+                    <!--ms-for:($idx,el) in @moduleImage-->
+                    <li style="width:100%;cursor: pointer">
+                        <img style="max-height: 900px;width: 100%;" ms-attr="{src: @api + 'file/get?img=' + el.image_url[0].guid}"
+                             ms-click="@gotoPage(el)"/>
+                    </li>
+                    <!--ms-for-end:-->
+                </ul>
+            </div>
+        </div>
+        <!--通知-->
+        <xmp ms-widget="{is:'ms-ele-notice'}"></xmp>
+    </div>
+    <!--内容-->
+    <div class="content">
+        <!--站点地图-->
+        <xmp ms-widget="{is:'ms-ele-title',menuName:'关于',firstPath:'uptangIntro',pageName:'>兴唐简介',pagePath:'uptangIntro'}"></xmp>
+        <!--兴唐简介-->
+        <div class="uptang am-text-center">
+            <!--题目-->
+            <div class="first_title">
+                <div class="title">
+                    <span>兴唐简介</span>
+                    <span class="english_title">UPTANG PROFILE</span>
+                </div>
+                <div class="title_css">
+                    <span>科技服务教育</span>
+                    <span>理念引领教育</span>
+                    <span>办学实践教育</span>
+                </div>
+            </div>
+            <!--内容-->
+            <div class="uptangCon">
+                <div class="company-profile">
+                    <span>COMPANY PROFILE</span>
+                </div>
+                <!--左边-->
+                <div class="uptangLeft float-left">
+                    <img src="../../../common/img/uptang_profile.jpg"/>
+                </div>
+                <!--中间-->
+                <div class="uptangMiddle float-left">
+                    <p>
+                        成都兴唐信息技术有限公司成立于2007年，公司总部坐落于成都高新技术产业开发区，历经多年，
+                        已发展为集教育科技产品研发、销售、服务于一体的国家级高新技术企业。
+                    </p>
+                    <p>
+                        在多年成长的历程中，公司始终按照"建设基于云计算和教育大数据云平台"的发展战略，不断吸纳
+                        人才、整合技术及社会资源，多次荣获政府专项资金支持，公司获得了健康、稳定、快速的发展。
+                        目前企业研发产品拥有多项国家专利和二十多项软件著作权。展望未来，我们将持之以恒打造最具
+                        价值的教育生态圈，为中国的教育研究和改革保驾护航。
+                    </p>
+                    <p>
+                        "以优质企业报社会"是我们兴唐人奋斗的目标和方向！
+                    </p>
+                </div>
+                <!--右边-->
+                <div class="uptangRight float-right">
+                    <p>
+                        Established in 2007,Chengdu Xingtang Information Technology Co.Ltd. is
+                        located in Chengdu High-tech Industrial Development Zone .After many years ,it
+                        has been developed into a national high-tech enterprise integrating R&P,sales
+                        and service of education and technology products.
+                    </p>
+                    <p>
+                        In the course of years of growth, the company has always absorbed talents,integrated
+                        technology and social resources according to the development strategy of “building a
+                        cloud platform based on cloud computing and big education data”,then gained special
+                        funds support of government many times and has achieved healthy,stable and rapid
+                        development. At present,the company's R&D products have a number of national patents
+                        and more than 20 software copyright.Looking forward to the future,we will continue
+                        to create the most valuable educational ecosystem, for protecting China's
+                        educational research and reform .
+                    </p>
+                    <p>
+                        “To repay the society with high-quality enterprises ” is the goal and direction
+                        of the Xingtang people to strive for!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--公司架构-->
+        <div class="architecture am-text-center">
+            <!--题目-->
+            <div class="first_title">
+                <div class="title">
+                    <span>公司架构</span>
+                    <span class="english_title">COMPANY ARCHITECTURE</span>
+                </div>
+                <div class="title_css">
+                    <span>科技服务教育</span>
+                    <span>理念引导教育</span>
+                    <span>办学实践教育</span>
+                </div>
+            </div>
+            <div class="arch-two">
+                <img src="../../../common/img/company_archtwo.png"/>
+            </div>
+            <!--<div class="archCon">-->
+                <!--<img src="../../../common/img/company_architecture.jpg"/>-->
+            <!--</div>-->
+        </div>
+        <!--侧边导航-->
+        <xmp ms-widget="{is:'ms-ele-advice'}"></xmp>
+    </div>
+</div>

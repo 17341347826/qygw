@@ -1,0 +1,77 @@
+.all{
+    /*border:1px solid red;*/
+    /*overflow:hidden;*/
+}
+/*咨询部分*/
+.advice{
+    /*border:1px solid red;*/
+    float:left;
+    position: fixed;
+    z-index: 999;
+    /*top:340px;*/
+    bottom:36%;
+    right:0px;
+}
+.advice a{
+    display: block;
+    cursor: pointer;
+    width:60px;
+    height:66px;
+    background-color: #d1d1d1;
+    border-radius:4px;
+    text-align: center;
+}
+.advice a:hover{
+    background-color: #a7bbe0;
+}
+.advice a img{
+    margin-top:10px;
+    width:30px;
+}
+.advice a span{
+    display:block;
+    color:white;
+    font-size: 12px;
+}
+.advice-qq{
+    margin:1px 0;
+}
+.advice .advice-mail img{
+    margin-top:14px;
+}
+.advice .advice-mail span{
+    margin-top:6px;
+}
+/*弹出层*/
+.popup{
+    float:left;
+    position: fixed;
+    z-index: 999;
+    /*bottom:39%;*/
+    right:60px;
+    width:286px;
+}
+.popup>div{
+    background-color: white;
+    border-radius: 8px;
+    /*float:left;*/
+    /*position: fixed;*/
+    /*z-index: 999;*/
+    /*bottom:41%;*/
+    /*right:76px;*/
+    padding:20px 15px 20px 20px;
+}
+/*咨询电话弹出层*/
+.popup-phone{
+    bottom:45%;
+}
+#popup-phone{
+    width:280px;
+}
+/*邮箱弹出层*/
+.popup-mail{
+    bottom:32%;
+}
+#popup-mail{
+    width:280px;
+}

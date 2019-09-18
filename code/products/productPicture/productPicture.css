@@ -1,0 +1,42 @@
+#productPicture .am-scrollable-horizontal {
+    padding: 0 75px;
+    min-width: 1130px;
+    min-height: 500px !important;
+}
+#productPicture .am-thumbnails {
+    height: 26px;
+}
+#productPicture .am-scrollable-horizontal {
+    min-height: 400px;
+}
+#productPicture .mb_25 {
+    margin-bottom: 25px;
+}
+#productPicture #up_img {
+    max-height: 200px;
+    max-width: 200px;
+}
+#productPicture #inputArea {
+    opacity: 0;
+}
+#add_productPicture {
+    max-width: 45%;
+}
+#productPicture .statusBar ,#productPicture .webuploader-pick,#productPicture #dndArea p{
+    opacity: 0;
+}
+.am-modal {
+    opacity: 1;
+}
+body {
+    overflow: auto!important;
+    padding: 0!important;
+}
+
+#preview_content {
+    text-align: left;
+}
+#preview_content img {
+    display: block;
+    margin: 0 auto;
+}

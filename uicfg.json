@@ -1,0 +1,14 @@
+{	
+	"site":{
+		"url":"index.html",
+		"web":"",
+		"virtual_domain":"http://www.xtyun.net/"
+	},
+	"window_info":{
+		"cx":600,
+		"cy":400,
+		"title":"wengine"
+	},
+	"before":[],
+	"after":[]
+}

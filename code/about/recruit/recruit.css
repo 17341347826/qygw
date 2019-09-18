@@ -1,0 +1,183 @@
+/*banner*/
+.banner img{
+    width: 100%;
+    display: block;
+}
+/*内容*/
+#recruit .content {
+    /*border: 1px solid red;*/
+    /*padding-top: 60px;*/
+    padding-bottom: 30px;
+    position: relative;
+}
+/*后端工程师*/ /*JAVA 程序员*/
+#recruit .conPerson{
+    display:inline-block;
+    /*border:1px solid blue;*/
+    width:1057px;
+    height:442px;
+    /*background: url("../../common/img/recruit1.png") no-repeat;*/
+    /*background-size:100% 100%;*/
+    position: relative;
+    /*padding:0 60px;*/
+    overflow: auto;
+    zoom:1;
+}
+#recruit .java{
+    width:1057px;
+    height:604px;
+}
+/*后端工程师*/
+#recruit .backEnd{
+    background: url("../../../common/img/recruit1.png") no-repeat;
+    background-size:100% 100%;
+}
+#recruit .backEnd_left{
+    color:#A794DA;
+}
+/*左边*/
+#recruit .conPerson_left{
+    /*border:1px solid red;*/
+    background-color: #F4F1FA;
+    /*background-color:red;*/
+    width:270px;
+    height:50px;
+    /*color:#A794DA;*/
+    position: absolute;
+    top:263px;
+    left:67px;
+    opacity: .9;
+    filter:alpha(opacity=90);
+}
+#recruit .java_left{
+    /*top:209px;*/
+    left:47px;
+}
+#recruit .conPerson_left span{
+    display: inline-block;
+    font-weight: bold;
+    margin-top:8px;
+}
+#recruit .conPerson_left div{
+    font-size:12px;
+    line-height: 12px;
+}
+/*中间*/
+#recruit .conPerson_center {
+    /*border: 1px solid red;*/
+    float: left;
+    text-align: left;
+    margin-left: 405px;
+    margin-top: 79px;
+    color: #858584;
+}
+#recruit .conPerson_cenCon{
+    margin: .2rem 0;
+}
+/*右边*/
+#recruit .conPerson_right{
+    /*border:1px solid blue;*/
+    display:inline-block;
+    /*float:left;*/
+    text-align: left;
+    margin-right:40px;
+    margin-top:79px;
+    color:#858584;
+}
+/*web前端开发工程师*/
+#recruit .frontEnd{
+    background: url("../../../common/img/recruit2.png") no-repeat;
+    background-size:100% 100%;
+}
+#recruit .frontEnd_right{
+    color:#26C2B7;
+}
+/*左边*/
+#recruit .conPerson_center2{
+    /*border:1px solid blue;*/
+    display:inline-block;
+    /*float:left;*/
+    text-align: left;
+    margin-left:70px;
+    margin-top:79px;
+    color:#858584;
+}
+/*右边*/
+#recruit .conPerson_right2{
+    /*border:1px solid red;*/
+    background-color: #F4F1FA;
+    /*background-color:red;*/
+    width:270px;
+    height:50px;
+    /*color:#26C2B7;*/
+    position: absolute;
+    top:263px;
+    right:105px;
+    opacity: .9;
+    filter:alpha(opacity=90);
+}
+#recruit .conPerson_right2 span{
+    display: inline-block;
+    font-weight: bold;
+    margin-top:8px;
+}
+#recruit .conPerson_right2 div{
+    font-size:12px;
+    line-height: 12px;
+}
+/*JAVA 程序员*/
+#recruit .java{
+    background: url("../../../common/img/recruit3.png") no-repeat;
+    background-size:100% 100%;
+}
+#recruit .java_left{
+    color:#2F698D;
+    margin-left:15px;
+}
+/*销售代表*/
+#recruit .sales{
+    background: url("../../../common/img/recruit4.png") no-repeat;
+    background-size:100% 100%;
+}
+#recruit .sales_right{
+    color:#F8B23E;
+    margin-right:-45px;
+}
+
+
+
+
+/********轮播********/
+/*头部*/
+.header {
+    position: relative;
+    overflow: hidden;
+}
+/*轮播焦点*/
+.am-slider-default .am-control-nav {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+}
+
+.am-slider-default .am-control-nav li a {
+    width: 20px;
+    height: 6px;
+    border-radius: 0;
+    margin-top: -30px;
+}
+
+/*选中*/
+.am-slider-default .am-control-nav li a.am-active {
+    background-color: #f1f2f6;
+}
+
+/*未选中*/
+.am-slider-default .am-control-nav li a {
+    background-color: #1e2c6a;
+}
+
+.am-slider-default {
+    margin: 0;
+}
+

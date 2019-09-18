@@ -1,0 +1,219 @@
+ <div id="product" class="am-g" ms-important="product">
+        <!--头部-->
+        <div class="header">
+            <!-- banner-->
+            <div class="banner">
+                <!--ms-for:($idx,el) in @productInfo-->
+                <img ms-visible="home_page_picture" ms-attr="{src: @home_page_picture}" alt=""/>
+                <img ms-visible="!home_page_picture" src="../../../common/img/banner_edu.jpg"/>
+                <!--ms-for-end:-->
+            </div>
+            <!--通知-->
+            <xmp ms-widget="{is:'ms-ele-notice'}"></xmp>
+        </div>
+        <!--内容-->
+        <div class="content">
+            <!--站点地图-->
+            <xmp ms-widget="{is:'ms-ele-title',menuName:'产品',firstPath:'product',pageName:'>' + @productName,pagePath:'product'}"></xmp>
+
+            <!--ms-for:($idx,el) in @productInfo-->
+            <div>
+                <h1 align="center" style="margin-bottom: 75px;">{{el.product_name}}</h1>
+                <div id="product_content" ms-html="el.product_content">
+
+                </div>
+            </div>
+            <!--ms-for-end:-->
+
+
+            <!--&lt;!&ndash;评价模型&ndash;&gt;-->
+            <!--<div class="conFirst conCom">-->
+                <!--<div class="conTitle">-->
+                    <!--<img src="../../../common/img/proPvaluate.png"/>-->
+                    <!--<span>评价模型</span>-->
+                <!--</div>-->
+                <!--<div class="conCenter am-text-center">-->
+                    <!--<img src="../../../common/img/proModel.png"/>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash;产品特色&ndash;&gt;-->
+            <!--<div class="conSecond conCom">-->
+                <!--<div class="conTitle">-->
+                    <!--<img src="../../../common/img/proFeature.png"/>-->
+                    <!--<span>产品特色</span>-->
+                <!--</div>-->
+                <!--<div class="conCenter am-text-center">-->
+                    <!--<ul>-->
+                        <!--<li class="float-left">-->
+                            <!--<div>-->
+                                <!--<div class="conSLeft float-left">-->
+                                    <!--<img src="../../../common/img/feature1.png"/>-->
+                                <!--</div>-->
+                                <!--<div class="conSRight float-right">-->
+                                    <!--<span>三大指标体系（灵活、可定制）</span>-->
+                                    <!--<p>-->
+                                        <!--行政指标：教育部门统一制定的测评指标。<br/>-->
+                                        <!--共享指标：地区和学校推送分享的特色指标。<br/>-->
+                                        <!--特色指标：地区和学校根据自身特点和实际情<br/>-->
+                                        <!--况制定的个性测评指标。-->
+                                    <!--</p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<div>-->
+                                <!--<div class="conSLeft float-left">-->
+                                    <!--<img src="../../../common/img/feature2.png"/>-->
+                                <!--</div>-->
+                                <!--<div class="conSRight float-right">-->
+                                    <!--<span>成长记录袋</span>-->
+                                    <!--<p>-->
+                                        <!--包含整个学生发展过程中的阶段综合素质报<br/>-->
+                                        <!--告、教师评语、测评成绩和写实服务。-->
+                                    <!--</p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                        <!--<li class="float-right">-->
+                            <!--<div>-->
+                                <!--<div class="conSLeft float-left">-->
+                                    <!--<img src="../../../common/img/feature3.png"/>-->
+                                <!--</div>-->
+                                <!--<div class="conSRight float-right">-->
+                                    <!--<span>流程透明结果公平</span>-->
+                                    <!--<p>-->
+                                        <!--平台从数据收集到结果生成，经历了班主任<br/>-->
+                                        <!--审核、学生家长监督、教育部门监督等环境，<br/>-->
+                                        <!--整个环节透明，保证公平公正。-->
+                                    <!--</p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                        <!--<li class="float-left">-->
+                            <!--<div>-->
+                                <!--<div class="conSLeft float-left">-->
+                                    <!--<img src="../../../common/img/feature4.png"/>-->
+                                <!--</div>-->
+                                <!--<div class="conSRight float-right">-->
+                                    <!--<span>大数据、云平台</span>-->
+                                    <!--<p>-->
+                                        <!--平台基于省、市、区县、学校等几级单位设计<br/>-->
+                                        <!--通过互联网技术平台化运营，通过大数据分<br/>-->
+                                        <!--析教育质量情况。-->
+                                    <!--</p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<div>-->
+                                <!--<div class="conSLeft float-left">-->
+                                    <!--<img src="../../../common/img/feature5.png"/>-->
+                                <!--</div>-->
+                                <!--<div class="conSRight float-right">-->
+                                    <!--<span>内容 + 平台 + 服务</span>-->
+                                    <!--<p>-->
+                                        <!--综合性评价平台：平台从多角度、多内容、<br/>-->
+                                        <!--多角色对教育质量进行全面评价。<br/>-->
+                                        <!--专业服务：根据不同地区的制定不同学校，<br/>-->
+                                        <!--提供专业的内容和方案供选择。本地化的技<br/>-->
+                                        <!--术团队。-->
+                                    <!--</p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                        <!--<li class="float-right">-->
+                            <!--<div>-->
+                                <!--<div class="conSLeft float-left">-->
+                                    <!--<img src="../../../common/img/feature6.png"/>-->
+                                <!--</div>-->
+                                <!--<div class="conSRight float-right">-->
+                                    <!--<span>多角色参与分工明确</span>-->
+                                    <!--<p>-->
+                                        <!--教育综合评价系统把教育相关的主体（教育<br/>-->
+                                        <!--部门，评价委员会、学校、评价小组、教师、<br/>-->
+                                        <!--学生、家长）全部关联起来，形成全面、科<br/>-->
+                                        <!--学的评价；同时减轻每个角色的工作量。-->
+                                    <!--</p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash;产品价值&ndash;&gt;-->
+            <!--<div class="conThird conCom">-->
+                <!--<div class="conTitle">-->
+                    <!--<img src="../../../common/img/proValue.png"/>-->
+                    <!--<span>产品价值</span>-->
+                <!--</div>-->
+                <!--<div class="conCenter am-text-center proVal">-->
+                   <!--<div>-->
+                       <!--<span class="val1">-->
+                           <!--<img class="value-top" src="../../../common/img/value1.png"/>-->
+                           <!--<span class="value-middle">-->
+                               <!--<img src="../../../common/img/value_edu.png"/>-->
+                           <!--</span>-->
+                           <!--<ul>-->
+                               <!--<li style="list-style-type: disc;">.关注地区教育水平，学生发展现状</li>-->
+                               <!--<li>.了解学生成长情况与教师教育水平情况</li>-->
+                               <!--<li>.与其他地区进行对比，发现当地教育过程中的缺陷及时弥补</li>-->
+                               <!--<li>.与达到通过评价促进教育发展的目的</li>-->
+                           <!--</ul>-->
+                       <!--</span>-->
+                       <!--<span class="val2">-->
+                            <!--<img class="value-top" src="../../../common/img/value2.png"/>-->
+                           <!--<span class="value-middle">-->
+                               <!--<img src="../../../common/img/value_school.png"/>-->
+                           <!--</span>-->
+                            <!--<ul>-->
+                               <!--<li>.关注地区教育水平，学生发展现状</li>-->
+                               <!--<li>.了解学生成长情况与教师教育水平情况</li>-->
+                               <!--<li>.与其他地区进行对比，发现当地教育过程中的缺陷及时弥补</li>-->
+                               <!--<li>.与达到通过评价促进教育发展的目的</li>-->
+                           <!--</ul>-->
+                       <!--</span>-->
+                       <!--<span class="val3">-->
+                            <!--<img class="value-top" src="../../../common/img/value3.png"/>-->
+                           <!--<span class="value-middle">-->
+                               <!--<img src="../../../common/img/value_teacher.png"/>-->
+                           <!--</span>-->
+                            <!--<ul>-->
+                               <!--<li>.掌握班级综合素质情况</li>-->
+                               <!--<li>.了解自身教育情况</li>-->
+                               <!--<li>.辅助班级管理</li>-->
+                               <!--<li>.制定个性化教学和辅导方案</li>-->
+                           <!--</ul>-->
+                       <!--</span>-->
+                       <!--<span class="val4">-->
+                            <!--<img class="value-top" src="../../../common/img/value4.png"/>-->
+                           <!--<span class="value-middle">-->
+                               <!--<img src="../../../common/img/value_parent.png"/>-->
+                           <!--</span>-->
+                            <!--<ul>-->
+                               <!--<li>.关注地区教育水平，学生发展现状</li>-->
+                               <!--<li>.了解学生成长情况与教师教育水平情况</li>-->
+                               <!--<li>.与其他地区进行对比，发现当地教育过程中的缺陷及时弥补</li>-->
+                               <!--<li>.与达到通过评价促进教育发展的目的</li>-->
+                           <!--</ul>-->
+                       <!--</span>-->
+                       <!--<span class="val5">-->
+                            <!--<img class="value-top" src="../../../common/img/value5.png"/>-->
+                           <!--<span class="value-middle">-->
+                               <!--<img src="../../../common/img/value_student.png"/>-->
+                           <!--</span>-->
+                            <!--<ul>-->
+                               <!--<li>.关注地区教育水平，学生发展现状</li>-->
+                               <!--<li>.了解学生成长情况与教师教育水平情况</li>-->
+                               <!--<li>.与其他地区进行对比，发现当地教育过程中的缺陷及时弥补</li>-->
+                               <!--<li>.与达到通过评价促进教育发展的目的</li>-->
+                           <!--</ul>-->
+                       <!--</span>-->
+                   <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+
+            <!--侧边导航-->
+            <xmp ms-widget="{is:'ms-ele-advice'}"></xmp>
+        </div>
+</div>

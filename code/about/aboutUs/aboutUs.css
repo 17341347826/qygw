@@ -1,0 +1,150 @@
+/*banner*/
+.banner img{
+    width: 100%;
+    display: block;
+}
+/*内容*/
+#aboutUs .content{
+    /*border:1px solid red;*/
+    /*padding:60px 84px 30px;*/
+    /*background-color:#F7F7F7;*/
+    padding:0 0 50px;
+    position: relative;
+}
+/*企业理念*/
+#aboutUs .concept{
+    /*border:1px solid yellow;*/
+    background:url('../../../common/img/enterprise_concept.jpg') no-repeat;
+    background-size:100%;
+    height:510px;
+    padding:45px 0 50px;
+}
+@media screen and (min-width:1600px){
+    #aboutUs .concept{
+        height:650px;
+    }
+}
+/*企业目标*/
+#aboutUs .goal{
+    /*border:1px solid red;*/
+    padding-top:30px;
+    /*padding: 30px 0 50px;*/
+    overflow: auto;
+    zoom:1;
+    /*padding:60px 84px 30px;*/
+    height:375px;
+    background: url("../../../common/img/aboutUS_goal.png") no-repeat;
+    background-size: 100%;
+}
+/*第一部分*/
+#aboutUs .first_title{
+    /*margin-bottom:40px;*/
+}
+#aboutUs .first_title .title{
+    color:#1e53a3;
+    font-size:28px;
+    margin-bottom:20px;
+}
+#aboutUs .first_title .title span{
+    padding:0 8px;
+}
+#aboutUs .first_title .title span:first-child{
+    border-right:1px solid #1e53a3;
+}
+#aboutUs .first_title .english_title{
+    font-size:16px;
+    /*font-weight:600;*/
+}
+#aboutUs .first_title .title_css{
+    color:#ababab;
+    font-size: 15px;
+    margin-top: -16px;
+}
+#aboutUs .first_title .title_css span{
+    padding:0 4px;
+}
+/*企业目标-内容*/
+#aboutUs .goalCon{
+    /*border:1px solid red;*/
+    /*padding:40px 120px;*/
+    padding:40px 0;
+    overflow: auto;
+    zoom:1;
+}
+/*左边*/
+#aboutUs .goalLeft{
+    /*border:1px solid blue;*/
+    width:49%;
+}
+#aboutUs .goalLeft p{
+    text-align: right;
+    float:right;
+    color:#7B7B7B;
+}
+/*右边*/
+#aboutUs .goalRight{
+    /*border:1px solid blue;*/
+    /*margin-right:290px;*/
+    width:49%;
+}
+#aboutUs .goalRight p{
+    text-align: left;
+    font-size:1.2em;
+    color:#7B7B7B;
+    float:left;
+}
+/*团队活动*/
+#aboutUs .activities{
+    padding:30px 0 50px;
+}
+#aboutUs .activities .active_list{
+    margin-top:30px;
+}
+#aboutUs .activities .active_list span{
+    /*width:18%;*/
+    /*border:1px solid red;*/
+    /*margin-top:10px;*/
+}
+#aboutUs .activities .active_list span img{
+    width:18%;
+    margin-top:5px;
+    margin-right:5px;
+}
+
+
+
+
+/********轮播********/
+/*头部*/
+.header {
+    position: relative;
+    overflow: hidden;
+}
+/*轮播焦点*/
+.am-slider-default .am-control-nav {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+}
+
+.am-slider-default .am-control-nav li a {
+    width: 20px;
+    height: 6px;
+    border-radius: 0;
+    margin-top: -30px;
+}
+
+/*选中*/
+.am-slider-default .am-control-nav li a.am-active {
+    background-color: #f1f2f6;
+}
+
+/*未选中*/
+.am-slider-default .am-control-nav li a {
+    background-color: #1e2c6a;
+}
+
+.am-slider-default {
+    margin: 0;
+}
+

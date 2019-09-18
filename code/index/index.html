@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <!-- 360双核这种找抽浏览器-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link href="../../common/lib/amazeui.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../commonCss/commonCss.css"/>
+    <link rel="stylesheet" href="index.css"/>
+    <!--IE9以及IE9以上版本可识别和非IE -->
+    <script src="../../common/lib/jquery.min.js"></script>
+    <!--  IE9以及IE9以下版本可识别-->
+    <!--[if lt IE 9]>
+    <script src="../../common/lib/modernizr.js"></script>
+    <script type="text/javascript" src="../../common/lib/amazeui.ie8polyfill.js"></script>
+    <![endif]-->
+
+    <!--视频播放兼容-->
+    <script src="http://api.html5media.info/1.1.6/html5media.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <!-- 头部-->
+        <div class="header">
+            <!--最上面-->
+            <div class="header_top" >
+                <div class="float-left title_nowrap"><span class="am-icon-tty top_phone"></span>400-028-4088</div>
+                <div class="float-right title_nowrap">
+                    <span class="am-icon-qq top_qq"></span>
+                    <span class="am-icon-weixin"></span>
+                </div>
+                <div class="am-text-center">
+                    <span>|</span>
+                    <span>科技服务教育</span>
+                    <span>|</span>
+                    <span>理念引导教育</span>
+                    <span>|</span>
+                    <span>办学实践教育</span>
+                    <span>|</span>
+                </div>
+            </div>
+            <!-- 导航-->
+            <div class="nav">
+                <div class="float-left nav_img">
+                   <!--<img src="../../common/img/logo2.png"/>
+                    <div>
+                        <span>兴唐技术</span>
+                        <span>UPTANG</span>
+                    </div>-->
+                </div>
+                <div class="float-right nav_left">
+                    <span><a href="#">首页</a></span>
+                    <span><a href="#">动态</a></span>
+                    <span><a href="#">产品</a></span>
+                    <span><a href="#">服务</a></span>
+                    <span><a href="#">案例</a></span>
+                    <span id="about"><a href="#">关于</a></span>
+                    <span id="search">
+                        <label id="sou_label" class="show"  click="labelEvent()">&nbsp;&nbsp;&nbsp;搜索...</label>
+                        <input type="text" class="search" id="sou" autocomplete="off" keyup="inputEvent()" style='outline:none;'>
+                    </span>
+                </div>
+            </div>
+            <!-- banner-->
+            <div class="banner" style="width:100%;">
+                <div style="width:100%;border:1px solid white;" class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
+                    <ul class="am-slides" style="width:100%;">
+                        <li style="width:100%;"><img src="../../common/img/banner.jpg" /></li>
+                        <li style="width:100%;"><img src="../../common/img/banner2.jpg" /></li>
+                    </ul>
+                </div>
+            </div>
+            <!--通知-->
+            <div class="notice">
+                <div class="notice_left ">
+                    <span><img src="../../common/img/notice.png"/></span>
+                    <span>通知</span>
+                </div>
+                <div class="noticeCon">
+                    <span style="font-size:1em;">兴唐技术2018新闻发布会！！！</span>
+                </div>
+            </div>
+        </div>
+        <!-- 内容-->
+        <div class="content">
+            <!--公司简介-->
+            <div class="conFirst am-center conPerson">
+                <div class="first_title">
+                    <div class="title">
+                        <span>公司简介</span>
+                        <span class="english_title">COMPANY PROFILE</span>
+                    </div>
+                    <div class="title_css">
+                        <!--<span>科技服务教育</span>-->
+                        <!--<span>理念引导教育</span>-->
+                        <!--<span>办学实践教育</span>-->
+                        <span>兴唐技术助力国家教育事业发展和革新</span>
+                    </div>
+                </div>
+                <div class="vPlay" id="vPlay">
+                    <!-- controls:向用户显示控件，比如播放按钮-->
+                    <!--<video width="320" height="240" controls preload="auto">-->
+                        <!--<source src="../CK2_DS_Feat_Water.webm" type="video/mp4">你的破浏览器可以退休了，赶紧升级吧！-->
+                    <!--</video>-->
+                    <div id="switch" class="switch"><img src="../../common/img/videoInit.png"/></div>
+                    <video id="videoPlay" src="../../common/img/video.mp4" width="100%" height="100%" controls preload></video>
+                    <!--<video id="videoPlay" src="../../common/img/video.mp4" width="100%" height="100%"  controls preload></video>-->
+
+                    <!--<video width="800" height="374">-->
+                        <!--<source src="../../common/img/video.mp4" type="video/mp4" controls/>-->
+                        <!--<object width="800" height="374" type="application/x-shockwave-flash" data="fallback.swf">-->
+                            <!--<param name="movie" value="fallback.swf" />-->
+                            <!--<param name="flashvars" value="autostart=true&amp;file=video.flv" />-->
+                        <!--</object>-->
+
+                    <!--</video>-->
+                </div>
+            </div>
+            <!--产品展示-->
+            <div class="conSecond conPerson">
+                <div class="first_title">
+                    <div class="title">
+                        <span>产品展示</span>
+                        <span class="english_title">PRODUCT DISPLAY</span>
+                    </div>
+                    <div class="title_css">
+                        <span>云技术</span>
+                        <span>大数据</span>
+                        <span>互联网</span>
+                        <span>让教育更简单</span>
+                    </div>
+                </div>
+                <div class="sec_con">
+                    <div class="lunbo">
+                        <!--<div id="imgList" style="width:2650px;margin-left:-20px;">-->
+                        <div id="imgList" style="width:3260px;margin-left:-40px;">
+                            <ul>
+                                <li id="imgCard6">
+                                    <span><img src="../../common/img/treeLodo3.png"/></span>
+                                    <img src="../../common/img/lb6.jpg" alt="6">
+                                    <p>6</p>
+                                    <!--<img src="../../common/img/treeBanner6.png" alt="6">-->
+                                </li>
+                                <li id="imgCard0" class="big">
+                                    <span><img src="../../common/img/treeLodo3.png"/></span>
+                                    <a href="javascript:void(0)">
+                                        快速登录
+                                        <span class="am-icon-chevron-right"></span>
+                                    </a>
+                                    <img src="../../common/img/lb1.jpeg" alt="1">
+                                    <p>教育综合素质评价<br/>大数据|云平台</p>
+                                    <!--<img src="../../common/img/treeBanner1.png" anews1t="1">-->
+                                </li>
+                                <li id="imgCard1">
+                                    <span><img src="../../common/img/treeLodo3.png"/></span>
+                                    <img src="../../common/img/lb2.jpg" alt="2">
+                                    <p>1</p>
+                                    <!--<img src="../../common/img/treeBanner2.png" anews1t="1">-->
+                                </li>
+                                <li id="imgCard2">
+                                    <span><img src="../../common/img/treeLodo3.png"/></span>
+                                    <img src="../../common/img/lb3.png" alt="3">
+                                    <p>2</p>
+                                    <!--<img src="../../common/img/treenBanner3.png" anews1t="1">-->
+                                </li>
+                                <li id="imgCard3">
+                                    <span><img src="../../common/img/treeLodo3.png"/></span>
+                                    <img src="../../common/img/lb4.jpeg" alt="4">
+                                    <p>3</p>
+                                    <!--<img src="../../common/img/treeBanner4.png" anews1t="1">-->
+                                </li>
+                                <li id="imgCard4">
+                                    <span><img src="../../common/img/treeLodo3.png"/></span>
+                                    <img src="../../common/img/lb5.jpeg" alt="5">
+                                    <p>4</p>
+                                    <!--<img src="../../common/img/treeBanner5.png" anews1t="1">-->
+                                </li>
+                                <li id="imgCard5">
+                                    <span><img src="../../common/img/treeLodo3.png"/></span>
+                                    <img src="../../common/img/lb6.jpg" alt="6">
+                                    <p>5</p>
+                                    <!--<img src="../../common/img/treeBanner6.png" anews1t="1">-->
+                                </li>
+                                <li id="imgCard7">
+                                    <span><img src="../../common/img/treeLodo3.png"/></span>
+                                    <img src="../../common/img/lunno1.png" alt="1">
+                                    <p>7</p>
+                                    <!--<img src="../../common/img/treeBanner1.png" anews1t="1">-->
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--<div id="pre">&lt;</div>-->
+                    <!--<div id="next">&gt;</div>-->
+                    <div id="pre"><img src="../../common/img/prev.png"/></div>
+                    <div id="next"><img src="../../common/img/next.png"/></div>
+                </div>
+            </div>
+            <!--新闻中心-->
+            <div class="conThird conPerson">
+                <div class="first_title">
+                   <div class="title">
+                       <span>新闻中心</span>
+                       <span class="english_title">NEWS CENTER</span>
+                   </div>
+                    <div class="title_css">
+                        <!--<span>科技服务教育</span>-->
+                        <!--<span>理念引导教育</span>-->
+                        <!--<span>办学实践教育</span>-->
+                        <span>了解兴唐最新技术和教育新闻</span>
+                    </div>
+                </div>
+                <div class="thirdTop">
+                   <div class="third_left">
+                       <img src="../../common/img/news.jpg"/>
+                   </div>
+                   <div class="third_right float-right">
+                       <div class="tRight_title">
+                           <span>|</span>
+                           <span>教育部都点赞了，真有这么牛！</span>
+                           <span class="news_date">2017.11.20</span>
+                       </div>
+                       <div class="tRight_con">
+                           <p><span style="visibility:hidden">哈哈</span>我们就是这么牛，你只有看到，
+                           哈哈哈哈哈哈哈哈哈！！！！肯德基搜到上课都打开完我都看见看见二姐窦尔敦可欧
+                           鸡年大吉额U盾</p>
+                       </div>
+                       <div class="more">
+                           <a href="javascript(0);">
+                               查看更多&nbsp;&nbsp;
+                               <span class="am-icon-caret-right"></span>
+                           </a>
+                       </div>
+                   </div>
+                </div>
+                <!--新闻中心下面-->
+                <div class="thirdBottom am-text-center">
+                    <div class="Bthird_class right_margin">
+                        <div class="Bthird_left dayBtn">
+                            <span class="Bthird_leftT daySpan">11/10</span>
+                            <span class="Bthird_year">2017</span>
+                        </div>
+                        <div class="Bthird_right newsBtn">
+                            <div class="Bthird_rightT newsBtnCon">关于2018春季放假通知</div>
+                            <span class="Bthird_con newsBtnCon">登记处罚决定开发和ID联发科无敌哦第的就和你爸妈你们第哦哦挤眉弄眼过</span>
+                        </div>
+                    </div>
+                    <!--<div class="Bthird_sky"></div>-->
+                    <div class="Bthird_class">
+                        <div class="Bthird_left">
+                            <span class="Bthird_leftT">11/10</span>
+                            <span class="Bthird_year">2017</span>
+                        </div>
+                        <div class="Bthird_right">
+                            <div class="Bthird_rightT">关于2018春季放假通知</div>
+                            <span class="Bthird_con">登记处罚决定开发和ID联发科无敌哦第的就和你爸妈你们第哦哦挤眉弄眼过</span>
+                        </div>
+                    </div>
+                    <div class="Bthird_class right_margin">
+                        <div class="Bthird_left">
+                            <span class="Bthird_leftT">11/10</span>
+                            <span class="Bthird_year">2017</span>
+                        </div>
+                        <div class="Bthird_right">
+                            <div class="Bthird_rightT">关于2018春季放假通知</div>
+                            <span class="Bthird_con">登记处罚决定开发和ID联发科无敌哦第的就和你爸妈你们第哦哦挤眉弄眼过</span>
+                        </div>
+                    </div>
+                    <!--<div class="Bthird_sky"></div>-->
+                    <div class="Bthird_class">
+                        <div class="Bthird_left">
+                            <span class="Bthird_leftT">11/10</span>
+                            <span class="Bthird_year">2017</span>
+                        </div>
+                        <div class="Bthird_right">
+                            <div class="Bthird_rightT">关于2018春季放假通知</div>
+                            <span class="Bthird_con">登记处罚决定开发和ID联发科无敌哦第的就和你爸妈你们第哦哦挤眉弄眼过</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部-->
+        <div class="footer">
+           <div style=" min-width:1183px;display:inline-block">
+               <div class="foot_Top">
+                   <div class="footTop_left float-left">
+                       <ul>
+                           <li>
+                               <ul>
+                                   <li class="footXian"></li>
+                                   <li class="footOne"><a href="#">首页</a></li>
+                                   <li><a href="#">公司简介</a></li>
+                                   <li><a href="#">产品展示</a></li>
+                                   <li><a href="#">新闻中心</a></li>
+                               </ul>
+                           </li>
+                           <li>
+                               <ul>
+                                   <!--<li class="footXian"><hr/></li>-->
+                                   <li class="footXian"></li>
+                                   <li class="footOne"><a href="#">动态</a></li>
+                                   <li><a href="#">公司新闻</a></li>
+                                   <li><a href="#">政策新闻</a></li>
+                               </ul>
+                           </li>
+                           <li>
+                               <ul>
+                                   <li class="footXian"></li>
+                                   <li class="footOne"><a href="#">产品</a></li>
+                                   <li><a href="#">教育质量综合评价</a></li>
+                                   <li><a href="#">网上阅卷系统</a></li>
+                                   <li><a href="#">网上选课系统</a></li>
+                                   <li><a href="#">学业质量监测评估</a></li>
+                                   <li><a href="#">OMR</a></li>
+                                   <li><a href="#">ISR</a></li>
+                               </ul>
+                           </li>
+                           <li>
+                               <ul>
+                                   <li class="footXian"></li>
+                                   <li class="footOne"><a href="#">服务</a></li>
+                                   <li><a href="#">网上阅卷服务</a></li>
+                                   <li><a href="#">民族测评服务</a></li>
+                               </ul>
+                           </li>
+                           <li>
+                               <ul>
+                                   <li class="footXian"></li>
+                                   <li class="footOne"><a href="#">案例</a></li>
+                                   <li><a href="#">教育质量综合评价方案</a></li>
+                                   <li><a href="#">网上阅卷解决方案</a></li>
+                                   <li><a href="#">民主测评解决方案</a></li>
+                               </ul>
+                           </li>
+                           <li>
+                               <ul>
+                                   <li class="footXian"></li>
+                                   <li class="footOne"><a href="#">关于</a></li>
+                                   <li><a href="#">兴唐简介</a></li>
+                                   <li><a href="#">企业文化</a></li>
+                                   <li><a href="#">联系我们</a></li>
+                                   <li><a href="#">加入我们</a></li>
+                               </ul>
+                           </li>
+                           <li id="footTop_rig">
+                               <div class="authority">
+                                   <img src="../../common/img/enterprise2.png"/>
+                                   <div style="color:#F2F2F2">企业官方网站</div>
+                               </div>
+                               <div class="weChat">
+                                   <img src="../../common/img/wechat2.png"/>
+                                   <div style="color:#F2F2F2">官方微信公众号</div>
+                               </div>
+                           </li>
+                       </ul>
+                   </div>
+                   <!--<div class="footTop_rig">-->
+                   <!--<div class="authority">-->
+                   <!--<img src="../../common/img/enterprise.png"/>-->
+                   <!--<div style="color:#F2F2F2">企业官方网站</div>-->
+                   <!--</div>-->
+                   <!--<div class="weChat">-->
+                   <!--<img src="../../common/img/wechat.jpg"/>-->
+                   <!--<div style="color:#F2F2F2">官方微信公众号</div>-->
+                   <!--</div>-->
+                   <!--</div>-->
+               </div>
+               <!--<div><hr/></div>-->
+               <div class="foot_bom">
+                   <div class="footBom_first">
+                       <span>地址：成都市武侯区汇智中心17楼</span>
+                       <span>邮箱：xt@uptang.com.cn</span>
+                       <span>网址：www.uptang.com.cn</span>
+                   </div>
+                   <div class="footBom_first">
+                       <span>版权所有：&copy;成都兴唐信息技术有限公司 蜀ICP备07501515</span>
+                   </div>
+               </div>
+           </div>
+            <div class="line"></div>
+        </div>
+    </div>
+    <!--<video id="videoPlay" src="../../common/img/video.mp4"  controls preload></video>-->
+</body>
+<!--avalon-->
+<script type="text/javascript" src="../../common/lib/avalon.js"></script>
+<!--placeholder处理-->
+<script src="../../common/module/placeholder.js"></script>
+<!--轮播-->
+<script src="../../common/module/lunbo.js"></script>
+<!--<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>-->
+<!--<script type="text/javascript" src=" http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.min.js"></script>-->
+<script type="text/javascript" src="../../common/lib/amazeui.js"></script>
+<!--自身js-->
+<script type="text/javascript" src="index.js"></script>
+</html>

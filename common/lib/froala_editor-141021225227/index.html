@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+	<link href="css/froala_editor.min.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            text-align: center;
+        }
+
+        section {
+            width: 80%;
+            margin: auto;
+            text-align: left;
+        }
+        #content {
+            width: 80%;
+            margin: auto;
+            text-align: left;
+        }
+        #content img {
+            max-width: 100%!important;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+  <section id="editor">
+      <div id='edit' style="margin-top: 30px;">
+          cs
+      </div>
+  </section>
+  <div>
+      <button onclick="get_content()">11111</button>
+  </div>
+  <div id="content" style="text-align: left">
+  </div>
+
+  <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+  <script src="js/froala_editor.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="./js/froala_editor_ie8.min.js"></script>
+  <![endif]-->
+  <script src="js/plugins/tables.min.js"></script>
+  <script src="js/plugins/lists.min.js"></script>
+  <script src="js/plugins/colors.min.js"></script>
+  <script src="js/plugins/media_manager.min.js"></script>
+  <script src="js/plugins/font_family.min.js"></script>
+  <script src="js/plugins/font_size.min.js"></script>
+  <script src="js/plugins/block_styles.min.js"></script>
+  <script src="js/plugins/video.min.js"></script>
+
+  <script>
+      $(function(){
+          $('#edit').editable({
+              imageUploadURL: "http://127.0.0.1:82/api/file/uploader",
+              inlineMode: false, alwaysBlank: true
+          })
+      });
+      function get_content() {
+          document.getElementById('content').innerHTML = document.getElementsByClassName('froala-element')[0].innerHTML;
+          console.log(document.getElementsByClassName('froala-element')[0].innerHTML)
+      }
+  </script>
+</body>
+</html>

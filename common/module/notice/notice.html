@@ -1,0 +1,15 @@
+<div class="notice" id="notice">
+    <div class="notice_left ">
+        <span style="display: table-cell;font-size: 16px"><img src="../../../common/img/notice.png"/> | 通知</span>
+    </div>
+    <!--<div class="noticeCon">-->
+        <!--<span style="font-size:1em;">兴唐技术2018新闻发布会！！！及框架的伟大无敌哦我都玩第哦</span>-->
+    <!--</div>-->
+    <div class="notice-con">
+        <div class="noticeCon" style="margin-top:0;">
+            <!--ms-for:($idx,el) in @newsInfo-->
+            <span ms-click="@gotoNewPage(el)" style="cursor: pointer;font-size: 14px;">{{el.news_title}}</span>
+            <!--ms-for-end:-->
+        </div>
+    </div>
+</div>

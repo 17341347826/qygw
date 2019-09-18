@@ -1,0 +1,36 @@
+#page-title{
+    overflow: auto;
+    zoom:1;
+}
+/*.float-right{*/
+    /*float:right;*/
+/*}*/
+
+/*title*/
+#page-title div{
+    /*float:right;*/
+    width: 224px;
+    margin-right:6.7%;
+    /*margin-left:80%;*/
+    font-size:1em;
+    margin-top:6px;
+}
+#page-title div a{
+    cursor:pointer;
+    color:#838383;
+}
+#page-title div a:hover{
+    color:#1E4C99;
+}
+/*首页*/
+#page-title .home-name{
+    /*color:#838383;*/
+}
+/*一级菜单*/
+#page-title .menu-name{
+
+}
+/*二级页面*/
+#page-title .page-name{
+
+}

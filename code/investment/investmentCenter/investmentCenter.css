@@ -1,0 +1,78 @@
+#investmentCenter {
+    background-color: #fff;
+}
+#investmentCenter .banner img {
+    width: 100%;
+}
+#investmentCenter #content_div {
+    padding: 25px 125px;
+    text-align: center;
+}
+#investmentCenter #content_div .content div {
+    position: relative;
+    margin-bottom: 22pt;
+}
+#investmentCenter #content_div .content div span {
+    color: #666666;
+    font-size: 12pt;
+    display: inline-block;
+    transform: translateY(2px);
+}
+#investmentCenter #content_div .content div input, #investmentCenter #content_div .content div select {
+    width: 224pt;
+    height: 26pt;
+    font-size: 10pt;
+    padding-left: 8pt;
+    border: 1pt #E4E4E4 solid;
+    border-radius: 2pt;
+}
+#investmentCenter .investment_submit {
+    border-radius: 3pt;
+    background-color: #33C1B5;
+    font-size: 16pt;
+    width: 290pt;
+    height: 40pt;
+    color: #fff;
+    margin-bottom: 75px;
+}
+#investmentCenter .investment_submit:hover {
+    background-color: #26AEA2;
+}
+
+
+
+
+/********轮播********/
+/*头部*/
+.header {
+    position: relative;
+    overflow: hidden;
+}
+/*轮播焦点*/
+.am-slider-default .am-control-nav {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+}
+
+.am-slider-default .am-control-nav li a {
+    width: 20px;
+    height: 6px;
+    border-radius: 0;
+    margin-top: -30px;
+}
+
+/*选中*/
+.am-slider-default .am-control-nav li a.am-active {
+    background-color: #f1f2f6;
+}
+
+/*未选中*/
+.am-slider-default .am-control-nav li a {
+    background-color: #1e2c6a;
+}
+
+.am-slider-default {
+    margin: 0;
+}
+

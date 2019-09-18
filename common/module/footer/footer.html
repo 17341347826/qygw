@@ -1,0 +1,88 @@
+<div class="footer-container am-cf">
+    <!-- 底部-->
+    <div class="footer">
+        <div class="footer-text">
+            <div class="foot_Top">
+                <div class="footTop_left">
+                    <ul>
+                        <li>
+                            <ul>
+                                <li class="footXian"></li>
+                                <li class="footOne"><a href="#">首页</a></li>
+                                <li><a href="javascript:void(0);" ms-click="@gotoPlace('#homeVideo')">公司宣传视频</a></li>
+                                <li><a href="javascript:void(0);" ms-click="@gotoPlace('#productTitle')">产品展示</a></li>
+                                <li><a href="javascript:void(0);" ms-click="@gotoPlace('#newsCenter')">新闻中心</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="footXian"></li>
+                                <li class="footOne"><a href="#">新闻</a></li>
+                                <li><a href="javascript:void(0);" ms-click="@onPageChange('#newsCenter')">兴唐新闻</a></li>
+                                <li><a href="javascript:void(0);" ms-click="@onPageChange('#policyNews')">行业资讯</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="footXian"></li>
+                                <li class="footOne"><a href="#">产品</a></li>
+                                <!--ms-for:($idx,el) in @productInfoList-->
+                                <li><a href="javascript:void(0);" ms-click="@onProductPage(el)">{{el.product_name}}</a></li>
+                                <!--ms-for-end:-->
+
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="footXian"></li>
+                                <li class="footOne"><a href="#">服务</a></li>
+                                <li><a href="javascript:void(0);" ms-click="@onPageChange('#downloadCenter')">下载中心</a></li>
+                                <li><a href="javascript:void(0);" ms-click="@onPageChange('#solution')">解决方案</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="footXian"></li>
+                                <li class="footOne"><a href="#">关于</a></li>
+                                <li><a href="javascript:void(0);" ms-click="@onPageChange('#uptangIntro')">兴唐简介</a></li>
+                                <li><a href="javascript:void(0);" ms-click="@onPageChange('#aboutUs')">企业文化</a></li>
+                                <li><a href="javascript:void(0);" ms-click="@onPageChange('#contactUs')">联系我们</a></li>
+                                <li><a href="javascript:void(0);" ms-click="@onPageChange('#recruit')">加入我们</a></li>
+                            </ul>
+                        </li>
+                        <li id="footTop_rig" class="float-right">
+                            <!--<div class="weChat">-->
+                                <!--<img src="../../common/img/wechat.jpg" />-->
+                                <!--<div style="color:#F2F2F2">官方微信公众号</div>-->
+                            <!--</div>-->
+                            <div class="weChat">
+                                <img src="../../common/img/wechat2.png" />
+                                <div style="color:#F2F2F2">官方微信公众号</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--<div><hr/></div>-->
+            <div class="foot_bom">
+                <div class="footBom_first">
+                    <span>版权所有：2007-2018&copy;成都兴唐信息技术有限公司</span>
+                    <span>市场合作电话：028-8454 6598</span>
+                    <span>服务热线：400-028-4088</span>
+                </div>
+                <div class="footBom_first">
+                    <span>地址：成都市武侯区长华路19号万科汇智中心17层
+                        <!--<label style="visibility: hidden">公智</label>-->
+                    </span>
+                    <!--<span>版权所有：2007-2018&copy;成都兴唐信息技术有限公司</span>-->
+                    <span class="turn-css" :click="@turn_shu()">蜀ICP备07501515号
+                        <!--<label style="visibility: hidden">服务热线：400-028-4088热线侯区长区</label>-->
+                    </span>
+                </div>
+                <div class="footBom_first">
+                </div>
+            </div>
+        </div>
+        <div class="line"></div>
+    </div>
+</div>

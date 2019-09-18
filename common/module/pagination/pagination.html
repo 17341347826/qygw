@@ -1,0 +1,19 @@
+<div>
+    <ul class="am-text-center am-pagination am-pagination-default" ms-visible="@totalPageArr.length>1"
+        data-am-widget="pagination">
+        <li ms-visible="@currentPage != 0">
+            <a class="" ms-on-click="@currentPageDate(@currentPage-1)">上页</a>
+        </li>
+        <!--ms-for: ($index,el) in @totalPageArr -->
+        <li ms-class="[@offset+$index==@currentPage?'am-active':'']">
+            <a class="" ms-on-click="@currentPageDate(@offset+$index)">{{@offset+$index+1}}</a>
+        </li>
+        <!--ms-for-end:-->
+        <li ms-visible="@currentPage+1 != @pageCount">
+            <a class="" ms-on-click="@currentPageDate(@currentPage+1)">下页</a>
+        </li>
+    </ul>
+    <div class="am-text-center am-margin-bottom-xl" ms-visible="@totalPageArr.length>1">
+        共{{@total}}条数据，共{{@pageCount}}页
+    </div>
+</div>

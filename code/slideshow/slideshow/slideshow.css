@@ -1,0 +1,9 @@
+#slideshow .am-scrollable-horizontal {
+    padding: 0 75px;
+}
+#slideshow .am-thumbnails {
+    height: 22px;
+}
+#slideshow .am-scrollable-horizontal {
+    min-height: 400px;
+}

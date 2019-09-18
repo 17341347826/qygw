@@ -1,0 +1,139 @@
+<div id="downloadManage" class="am-g" ms-important="downloadManage">
+    <!--头部-->
+    <div class="header">
+        <div class="banner" style="height: 166px;background-color: #1e2c6a">
+        </div>
+    </div>
+    <!--内容-->
+    <div class="content">
+        <!--站点地图-->
+        <xmp ms-widget="{is:'ms-ele-title',menuName:'服务',firstPath:'downloadManage',pageName:'>下载管理',pagePath:'downloadManage'}"></xmp>
+
+
+
+        <!--上传弹框-->
+        <div class="am-modal am-modal-confirm" tabindex="-1" id="upload_div">
+            <div class="am-modal-dialog">
+                <div class="am-modal-hd">上传文件</div>
+                <div style="width: 60%;margin: 0 auto">
+                    <div style="margin-bottom: 25px;">
+                        <span style="float:left;">产品类:</span>
+                        <label>
+                            <select data-placeholder="请选择" style="width: 175px; margin-right: 75px;" id="add_products_type"
+                                    ms-change="@getAddProductsType('add_products_type', 2)">
+                                <option value="" label="全部"></option>
+                                <!--ms-for:($idx,el) in @allProductInfo-->
+                                <option ms-attr="{value: el.id, label: el.product_name}"></option>
+                                <!--ms-for-end:-->
+                            </select>
+                        </label>
+                    </div>
+                    <div style="margin-bottom: 25px;">
+                        <span style="float:left;">附件:</span> <input id="add_down_upload" type="file" style="display: inline-block;" ms-change="@downUpload">
+                    </div>
+                    <span>请选择文件后缀为doc/docx/pdf/zip的文件</span>
+                    <div style="margin-bottom: 25px;">
+                        <span style="float:left;">文件名称： </span> <input type="text" ms-duplex="add_file_name" style="width: 175px;float:left;">
+                    </div>
+                    <div class="am-modal-footer">
+                        <span class="am-modal-btn" ms-click="@onAddCancel">取消</span>
+                        <span class="am-modal-btn" ms-click="@onAddConfirm">确定</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--确认弹框-->
+        <div class="am-modal am-modal-confirm" tabindex="-1" id="my-confirm">
+            <div class="am-modal-dialog">
+                <div class="am-modal-hd">{{dialog_title}}</div>
+
+                <div class="am-modal-footer">
+                    <span class="am-modal-btn" ms-click="@onCancel">取消</span>
+                    <span class="am-modal-btn" ms-click="@onConfirm">确定</span>
+                </div>
+            </div>
+        </div>
+        <div class="am-scrollable-horizontal">
+
+            <div style="margin: 25px 0;text-align: left">
+                <span>产品类:</span>
+                <label>
+                    <select data-placeholder="请选择" style="width: 175px; margin-right: 50px;height: 26px;"
+                            id="product_type" ms-change="@getDownloadType('product_type', 1)">
+                        <option value="" label="全部"></option>
+                        <!--ms-for:($idx,el) in @allProductInfo-->
+                        <option ms-attr="{value: el.id, label: el.product_name}"></option>
+                        <!--ms-for-end:-->
+                    </select>
+                </label>
+                <span>文件名称:</span>
+                <input type="text" style="width: 175px; margin-right: 50px;" ms-duplex="file_title" ms-on-change="@queryByTitle">
+                <span>状态:</span>
+                <label>
+                    <select data-placeholder="请选择" style="width: 175px;height: 26px;"
+                            id="product_status" ms-change="@getDownloadType('product_status', 2)">
+                        <option value="" label="全部"></option>
+                        <option value="0" label="未发布"></option>
+                        <option value="1" label="已发布"></option>
+                    </select>
+                </label>
+                <div style="float: right;">
+                    <button style="margin-right: 50px;" type="button" class="am-btn am-btn-default am-round am-btn-xs" ms-click="@onBatchIssue">发布文件</button>
+                    <button type="button" name="fileField"  class="am-btn am-btn-default am-round am-btn-xs" ms-click="@onUpload('')">上传文件</button>
+                </div>
+            </div>
+
+            <table class="am-table am-table-bordered am-table-centered">
+                <thead>
+                <tr>
+                    <th><input id="all_check" ms-click="@onAllCheck" type="checkbox"/>序号</th>
+                    <th>产品类</th>
+                    <th>文件名称</th>
+                    <th>发布状态</th>
+                    <th>上传时间</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!--ms-for:($idx,el) in @downloadInfo-->
+                <tr ms-visible="@downloadInfo.length">
+                    <td><input ms-attr="{id : @check + $idx}" ms-click="@check_list($event, el, (@check + $idx))" type="checkbox"/>{{$idx + 1}}</td>
+                    <td>
+                        <!--ms-for:($index,item) in @allProductInfo-->
+                        <span ms-visible="el.product_info.id === item.id">
+                            {{item.product_name}}
+                        </span>
+                        <!--ms-for-end:-->
+                    </td>
+                    <td>{{el.file_name}}</td>
+                    <td>
+                        <span ms-visible="el.status == -1">无效</span>
+                        <span ms-visible="el.status == 0">未发布</span>
+                        <span ms-visible="el.status == 1">已发布</span>
+                    </td>
+                    <td>{{el.create_time}}</td>
+                    <td>
+                        <ul class="am-avg-sm-2 am-thumbnails">
+                            <li><span ms-click="@onRevocation(el)" style="cursor: pointer">撤销</span></li>
+                            <li><span ms-click="@onRemove(el)" style="cursor: pointer">删除</span></li>
+                        </ul>
+                    </td>
+                </tr>
+                <!--ms-for-end:-->
+                <tr ms-visible="!@downloadInfo.length">
+                    <td colspan="6">
+                        <span>无数据</span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <ms-ele-pagination ms-widget="{pageSize:@query_list.page_size,currentPage:@currentPage,total:@total,currentChange:@currentChange}"></ms-ele-pagination>
+        </div>
+
+
+
+        <!--侧边导航-->
+        <xmp ms-widget="{is:'ms-ele-advice'}"></xmp>
+    </div>
+</div>

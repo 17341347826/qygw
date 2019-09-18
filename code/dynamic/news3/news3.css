@@ -1,0 +1,15 @@
+/*banner*/
+.banner img{
+    width: 100%;
+    display: block;
+}
+#news3 {
+    width: 100%;
+    padding: 0;
+}
+/*内容*/
+#news3 .content{
+    padding:0 0 50px;
+    position: relative;
+    border-top:1px solid #F3F3F3;
+}

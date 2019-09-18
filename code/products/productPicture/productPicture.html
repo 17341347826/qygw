@@ -1,0 +1,45 @@
+<div id="productPicture" class="am-g" ms-important="productPicture">
+    <!--头部-->
+    <div class="header">
+        <div class="banner" style="height: 166px;background-color: #1e2c6a">
+        </div>
+    </div>
+    <!--内容-->
+    <div class="content">
+        <!--站点地图-->
+        <xmp ms-widget="{is:'ms-ele-title',menuName:'产品',firstPath:'productsManage',productsManage:'>产品管理',pagePath:'productsManage'}"></xmp>
+
+        <div ms-visible="!@add_page" class="am-scrollable-horizontal">
+            <div style="width: 60%;">
+                <div class="am-thumbnail">
+                    <h3>首页图片</h3>
+                    <div ms-visible="!home_page_picture">
+                        <xmp ms-widget="{is:'ms-ele-uploader', id_prefix:'add_productsManage', id:'add_productsManage', files:@files, url:@data.uploader_url}"></xmp>
+                    </div>
+                    <img ms-attr="{src: @home_page_picture}" alt=""/>
+                    <div class="am-thumbnail-caption">
+                        <p align="center">
+                            <button ms-visible="!home_page_picture" class="am-btn am-btn-primary"
+                                    ms-click="@onUploaderHome">添加
+                            </button>
+                            <button ms-visible="home_page_picture" class="am-btn am-btn-default" ms-click="@onUpDeleteHome">
+                                删除
+                            </button>
+                        </p>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 28pt; width: 375pt;">
+                    <span style="margin-right: 16px;font-size: 12pt">产品简介: </span>
+                    <input ms-duplex="@productIntro" type="text"
+                           style="height: 26pt;width: 224pt;font-size: 10pt;padding-left: 8pt;border: 1pt #E4E4E4 solid;border-radius: 2pt;">
+                </div>
+            </div>
+            <div align="center">
+                <button type="button" class="am-btn am-btn-default" ms-click="@onBack()">返回</button>
+                <span style="margin: 0 75px"></span>
+                <button type="button" class="am-btn am-btn-primary" ms-click="@onAddConfirm">保存</button>
+            </div>
+        </div>
+    </div>
+</div>

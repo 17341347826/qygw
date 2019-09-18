@@ -1,0 +1,43 @@
+#newsManage .am-scrollable-horizontal {
+    padding: 0 75px;
+    min-width: 1130px;
+}
+#newsManage .am-thumbnails {
+    height: 26px;
+}
+#newsManage .am-scrollable-horizontal {
+    min-height: 400px;
+}
+#newsManage .mb_25 {
+    margin-bottom: 25px;
+}
+.am-modal {
+    opacity: 1;
+}
+body {
+    overflow: auto!important;
+    padding: 0!important;
+}
+section {
+    width: 80%;
+    text-align: left;
+}
+#preview_content {
+    text-align: left;
+}
+#preview_content img {
+    display: block;
+    margin: 0 auto;
+}
+
+/*#newsManage #btn_delete {*/
+    /*display: inline-block;*/
+    /*width: 24px;*/
+    /*height: 24px;*/
+/*}*/
+/*#newsManage #btn_delete {*/
+    /*background-image: url("../../../common/img/shanchu.png");*/
+/*}*/
+/*#newsManage #btn_delete:hover {*/
+    /*background-image: url("../../../common/img/shanchu-h.png");*/
+/*}*/

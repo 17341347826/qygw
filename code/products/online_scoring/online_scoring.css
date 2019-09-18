@@ -1,0 +1,104 @@
+/*banner*/
+.banner img{
+    width: 100%;
+    display: block;
+}
+/*内容*/
+#online_scoring .content{
+    /*border:1px solid red;*/
+    /*padding:60px 84px 30px;*/
+    /*background-color:#F7F7F7;*/
+    padding:0 0 80px;
+    background-color: #FDFDFD;
+    position: relative;
+}
+/*内容标题*/
+#online_scoring .conCom{
+    padding:10px 84px;
+    /*border:1px solid red;*/
+}
+#online_scoring .conCom .conTitle{
+    position: relative;
+    height:120px;
+    /*border:1px solid red;*/
+}
+#online_scoring .conCom .conTitle span{
+    display:inline-block;
+    color:#82BFFF;
+    /*font-weight: bold;*/
+    font-size:1.8em;
+    position: absolute;
+    bottom:10px;
+}
+/*内容*/
+#online_scoring .conCenter{
+    /*border:1px solid red;*/
+    margin:28px 0;
+}
+/*产品特点*/
+#online_scoring .markPro{
+    /*border:1px solid red;*/
+    color:#65ABF3;
+    font-size:1.2em;
+}
+#online_scoring .markPro .conCenter .mark-pro{
+    margin-bottom:33px;
+}
+#online_scoring .markPro .conCenter .mark-pro:last-child{
+    margin-bottom:0;
+}
+#online_scoring .mark-pro span:first-child{
+    margin-right:40px;
+}
+#online_scoring .markPro .mark-pro .circle{
+    width:.9em;
+    height:.9em;
+    border:1.5px solid #65ABF3;
+    border-radius:50%;
+    display:inline-block;
+    margin-right:5px;
+}
+/*系统功能*/
+#online_scoring .conSystem{
+    color:#72ABEA;
+    font-size:1.1em;
+}
+#online_scoring .conSystem .conCenter{
+    margin:28px 160px;
+    overflow: auto;
+    zoom:1;
+}
+#online_scoring .conSystem .con-system{
+    display:inline-block;
+    vertical-align: top;
+    width:24%;
+    text-align: left;
+    border:1px solid #CDD5F4;
+    border-radius: 10px;
+    padding:10px 20px;
+    height:130px;
+    margin-right:1%;
+}
+/*系统特点*/
+#online_scoring .conSystemF{
+    color:#9B9B9B;
+    font-size:1.1em;
+}
+#online_scoring .conSystemF .conCenter{
+    margin:28px 120px;
+}
+#online_scoring .conSystemF .conCenter .con-systemF{
+   margin-top:0;
+    margin-bottom:0;
+}
+/*系统运行环境*/
+#online_scoring .markEnvir{
+    color:#949494;
+    font-size:1.1em;
+}
+#online_scoring .markEnvir .conCenter{
+    margin:28px 120px 0;
+}
+#online_scoring .markEnvir .conCenter .mark-envir:first-child{
+    margin-bottom:30px;
+}

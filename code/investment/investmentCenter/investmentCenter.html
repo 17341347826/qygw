@@ -1,0 +1,66 @@
+<div id="investmentCenter" class="am-g" ms-important="investmentCenter">
+    <!--头部-->
+    <div class="header">
+        <!-- banner-->
+        <div class="banner" style="width:100%;">
+            <div style="width:100%;" class="slide am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
+                <!--<ul ms-if="!@moduleImage.length" class="am-slides" style="width:100%;">-->
+                    <!--<li style="width:100%;"><img src="../../../common/img/investment.png" /></li>-->
+                <!--</ul>-->
+                <ul class="am-slides" style="width:100%;">
+                    <!--ms-for:($idx,el) in @moduleImage-->
+                    <li style="width:100%;cursor: pointer">
+                        <img style="max-height: 900px;width: 100%;" ms-attr="{src: @api + 'file/get?img=' + el.image_url[0].guid}"
+                             ms-click="@gotoPage(el)"/>
+                    </li>
+                    <!--ms-for-end:-->
+                </ul>
+            </div>
+        </div>
+        <!--通知-->
+        <xmp ms-widget="{is:'ms-ele-notice'}"></xmp>
+    </div>
+    <!--内容-->
+    <div class="content">
+        <!--站点地图-->
+        <xmp ms-widget="{is:'ms-ele-title',menuName:'招商',firstPath:'investmentCenter',investmentCenter:'>招商中心',pagePath:'investmentCenter'}"></xmp>
+        <div id="content_div">
+            <div class="content" align="center">
+                <p style="color: #1E53A3;font-size: 20pt;margin: 0 0 29pt;">合作咨询</p>
+                <div style="margin-bottom: 18.5pt;">
+                    <span>意向产品：</span>
+                    <label>
+                        <select id="product_type" ms-change="@getProductType('product_type')" style="color:#A9A9A9;">
+                            <option value="0" label="请选择意向产品..."></option>
+                            <!--ms-for:($idx,el) in @productInfoList-->
+                            <option  ms-attr="{value: el.id, label: el.product_name}"></option>
+                            <!--ms-for-end:-->
+                        </select>
+                    </label>
+                </div>
+
+                <div>
+                    <span>单位名称：</span><input ms-duplex="@unitName" placeholder="请输入单位名称" type="text">
+                </div>
+
+                <div>
+                    <span>您的姓名：</span><input ms-duplex="@name" placeholder="请输入姓名" type="text">
+                </div>
+
+                <div>
+                    <span>电话号码：</span>
+                    <input ms-duplex="@telephone" placeholder="请输入手机号" type="text" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')"
+                           maxlength="11">
+                </div>
+            </div>
+
+
+            <button class="am-btn investment_submit" ms-click="@onSubmit">提<span style="margin-left: 1em;margin-right: 16px;">交</span></button>
+
+
+        </div>
+
+        <!--侧边导航-->
+        <xmp ms-widget="{is:'ms-ele-advice'}"></xmp>
+    </div>
+</div>

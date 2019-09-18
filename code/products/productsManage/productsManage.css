@@ -1,0 +1,42 @@
+#productsManage .am-scrollable-horizontal {
+    padding: 0 75px;
+    min-width: 1130px;
+    min-height: 500px !important;
+}
+#productsManage .am-thumbnails {
+    height: 26px;
+}
+#productsManage .am-scrollable-horizontal {
+    min-height: 400px;
+}
+#productsManage .mb_25 {
+    margin-bottom: 25px;
+}
+#productsManage #up_img {
+    max-height: 200px;
+    max-width: 200px;
+}
+#productsManage #inputArea {
+    opacity: 0;
+}
+#add_productsManage {
+    max-width: 45%;
+}
+#productsManage .statusBar ,#productsManage .webuploader-pick,#productsManage #dndArea p{
+    opacity: 0;
+}
+.am-modal {
+    opacity: 1;
+}
+body {
+    overflow: auto!important;
+    padding: 0!important;
+}
+
+#preview_content {
+    text-align: left;
+}
+#preview_content img {
+    display: block;
+    margin: 0 auto;
+}

@@ -1,0 +1,142 @@
+<div class="head-container am-cf">
+    <!--最上面-->
+    <div class="header_top">
+        <div class="float-left title_nowrap" style="width: 300px">
+            <!--<span class="am-icon-tty top_phone"></span>-->
+            <img class="top_phone" src="../../../common/img/telephone.png" /> 400-028-4088
+        </div>
+        <div class="float-right title_nowrap">
+            <a class="top-qq" href="http://exmail.qq.com/domain/uptang.com.cn" target="_black">
+                <!--<span class="am-icon-qq"></span>-->
+                <span class="am-icon-envelope" title='兴唐邮局'></span>
+            </a>
+            <a class="wei-xin" href="javascript:void(0)">
+                <span class="am-icon-weixin weiXin">
+                    <img src="../../../common/img/wechat2.png"/>
+                </span>
+            </a>
+            <span ms-visible="@user_type === 1" class="am-icon-user" style="margin: 0 45px;cursor:pointer;"><a href="javascript:void(0);" ms-click="@onPageChange('#personal')">个人中心</a></span>
+            <span ms-visible="@user_type === 1" class="am-icon-power-off out_login" ms-click="@onOutLogin()">退出</span>
+        </div>
+        <div class="am-text-center header-title ">
+            <!--<span>|</span>-->
+            <!--<span>科技服务教育</span>-->
+            <!--<span>|</span>-->
+            <!--<span>理念引导教育</span>-->
+            <!--<span>|</span>-->
+            <!--<span>办学实践教育</span>-->
+            <!--<span>|</span>-->
+            <div class="ts">
+                <img src="../../../common/img/header_title.png"/>
+            </div>
+        </div>
+    </div>
+    <!-- 导航--菜单-->
+    <div class="nav" ms-mouseleave="@menuLeaver">
+        <a class="float-left nav_img" href="#">
+            <!--<img src="../../common/img/logo2.png"/>-->
+            <!--<div>-->
+            <!--<span>兴唐技术</span>-->
+            <!--<span>UPTANG</span>-->
+            <!--</div>-->
+        </a>
+        <div class="float-right nav_left">
+            <span><a href="">首页</a></span>
+            <span ms-mouseenter="@slideshowEnter" ms-visible="@user_type === 1"><a href="javascript:void(0);" ms-click="@onPageChange('#slideshow')">轮播图
+                <span ms-visible="@secStatus==1" class="am-icon-angle-down"></span>
+            </a></span>
+            <span ms-mouseenter="@dynamicEnter">
+                <a href="javascript:void(0)">新闻
+                     <span ms-visible="@secStatus==2" class="am-icon-angle-down"></span>
+                </a>
+            </span>
+            <span ms-mouseenter="@productEnter">
+                <a href="javascript:void(0)">产品
+                    <span ms-visible="@secStatus==3" class="am-icon-angle-down"></span>
+                </a>
+            </span>
+            <span ms-mouseenter="@serviceEnter">
+                <a href="javascript:void(0)">服务
+                    <span ms-visible="@secStatus==4" class="am-icon-angle-down"></span>
+                </a>
+            </span>
+            <!--<span><a href="javascript:void(0)">案例</a></span>-->
+            <span ms-mouseenter="@investment">
+                <a href="javascript:void(0);" ms-click="@onPageChange('#investmentCenter')">招商
+                    <span ms-visible="@secStatus==7" class="am-icon-angle-down"></span>
+                </a>
+            </span>
+            <span id="about" ms-mouseenter="@aboutEnter">
+                <a href="#aboutUs">关于
+                    <span ms-visible="@secStatus==6" class="am-icon-angle-down"></span>
+                </a>
+            </span>
+            <!--<span ms-visible="@user_type === 1"><a href="#system">系统</a></span>-->
+            <!--<span id="search">-->
+            <!--<label id="sou_label" class="show"  click="labelEvent()">&nbsp;&nbsp;&nbsp;搜索...</label>-->
+            <!--<input type="text" class="search" id="sou" autocomplete="off" keyup="inputEvent()" style='outline:none;'>-->
+            <!--</span>-->
+        </div>
+        <!--二级菜单-->
+        <div id="menu" ms-visible="@secStatus!=0">
+            <!--新闻-->
+            <div class="dynamicMenu secMenu" ms-visible="@secStatus==1">
+                <span ms-visible="@user_type === 1"><a href="javascript:void(0);" ms-click="@onPageChange('#slideshow')">轮播图管理</a></span>
+            </div>
+            <!--新闻-->
+            <div class="dynamicMenu secMenu" ms-visible="@secStatus==2">
+                <span><a href="javascript:void(0);" ms-click="@onPageChange('#newsCenter')">兴唐新闻</a></span>
+                <span>|</span>
+                <span><a href="javascript:void(0);" ms-click="@onPageChange('#policyNews')">行业资讯</a></span>
+                <span ms-visible="@user_type === 1">|</span>
+                <span ms-visible="@user_type === 1"><a href="javascript:void(0);" ms-click="@onPageChange('#newsManage')">新闻管理</a></span>
+            </div>
+            <!--产品-->
+            <div class="productMenu secMenu" ms-visible="@secStatus==3">
+
+                <!--ms-for:($idx,el) in @productInfoList-->
+                <span><a href="javascript:void(0);" ms-click="@onProductPage(el)">{{el.product_name}}</a></span>
+                <span ms-visible="$idx < (@productInfoList.length - 1)">|</span>
+                <!--ms-for-end:-->
+
+                <!--<span><a href="#online_scoring">网上阅卷</a></span>
+                <span>|</span>
+                <span><a href="#isr">高速扫描仪</a></span>
+                <span>|</span>
+                <span><a href="#OMR">光标阅读机</a></span>
+                <span>|</span>
+                <span><a href="/structure.html">走班选科排课</a></span>
+                <span>|</span>
+                <span><a href="/structure.html">中考应用服务</a></span>-->
+                <span ms-visible="@user_type === 1">|</span>
+                <span ms-visible="@user_type === 1"><a href="javascript:void(0);" ms-click="@onPageChange('#productsManage')">产品管理</a></span>
+            </div>
+            <!--服务-->
+            <div class="serviceMenu secMenu" ms-visible="@secStatus==4">
+                <span><a href="javascript:void(0);" ms-click="@onPageChange('#downloadCenter')">下载中心</a></span>
+                <span ms-visible="@user_type === 1">|</span>
+                <span ms-visible="@user_type === 1"><a href="javascript:void(0);" ms-click="@onPageChange('#downloadManage')">下载管理</a></span>
+                <span>|</span>
+                <span><a href="javascript:void(0);" ms-click="@onPageChange('#solution')">解决方案</a></span>
+                <span ms-visible="@user_type === 1">|</span>
+                <span ms-visible="@user_type === 1"><a href="javascript:void(0);" ms-click="@onPageChange('#schemeManage')">方案管理</a></span>
+            </div>
+            <!--关于-->
+            <div class="aboutMenu secMenu" ms-visible="@secStatus==6">
+                <span><a href="javascript:void(0);" ms-click="@onPageChange('#uptangIntro')">兴唐简介</a></span>
+                <span>|</span>
+                <span><a href="javascript:void(0);" ms-click="@onPageChange('#aboutUs')">企业文化</a></span>
+                <span>|</span>
+                <span><a href="javascript:void(0);" ms-click="@onPageChange('#contactUs')">联系我们</a></span>
+                <span>|</span>
+                <span><a href="javascript:void(0);" ms-click="@onPageChange('#recruit')">加入我们</a></span>
+            </div>
+            <!--招商-->
+            <div class="aboutMenu secMenu" ms-visible="@secStatus==7">
+                <span><a href="javascript:void(0);" ms-click="@onPageChange('#investmentCenter')">招商中心</a></span>
+                <span ms-visible="@user_type === 1">|</span>
+                <span ms-visible="@user_type === 1"><a href="javascript:void(0);" ms-click="@onPageChange('#investmentManage')">招商管理</a></span>
+            </div>
+        </div>
+    </div>
+</div>

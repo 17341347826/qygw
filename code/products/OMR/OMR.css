@@ -1,0 +1,240 @@
+/*banner*/
+.banner img{
+    width: 100%;
+    display: block;
+}
+/*内容*/
+#OMR .content{
+    /*border:1px solid red;*/
+    /*padding:60px 84px 30px;*/
+    /*background-color:#F7F7F7;*/
+    padding:0 0 80px;
+    background-color: #FDFDFD;
+    position: relative;
+}
+/*内容标题*/
+#OMR .conCom{
+    padding:10px 84px;
+    /*border:1px solid red;*/
+}
+#OMR .conCom .conTitle{
+    position: relative;
+    height:120px;
+    /*border:1px solid red;*/
+}
+#OMR .conCom .conTitle span{
+    display:inline-block;
+    color:#82BFFF;
+    /*font-weight: bold;*/
+    font-size:1.8em;
+    position: absolute;
+    bottom:10px;
+}
+/*OMR2000C 型*/
+#OMR .conFirst{
+    /*border:1px solid blue;*/
+}
+/*2000c内容部分*/
+#OMR .conFirst .conCenter{
+
+}
+
+/*图片*/
+#OMR .omrFirst-img{
+     /*display:inline-block;*/
+     width:25%;
+    /*border:1px solid red;*/
+    /*height:416px;*/
+    /*line-height:416px;*/
+ }
+#OMR .omrFirst-img img{
+    width:100%;
+}
+/*文字*/
+#OMR .omrFirst-text{
+    width:75%;
+}
+/*公有部分操作*/
+#OMR .first-con{
+    /*border:1px solid greenyellow;*/
+    overflow: auto;
+    zoom:1;
+}
+#OMR .first-con>div>div{
+    /*display:inline-block;*/
+    float:left;
+}
+#OMR .first-con>div>div>div{
+    float:right;
+}
+#OMR .first-con .omr_text div:first-child{
+    border-right:none;
+}
+#OMR .omr_trt{
+    /*border:1px solid red;*/
+    display:inline-block;
+    width:32%;
+    /*height:225px;*/
+    /*padding-top:25px;*/
+    /*border-right:2px solid #F8F8F8;*/
+    /*border-bottom:2px solid #F8F8F8;*/
+    text-align: center;
+    padding:25px 14px 0;
+}
+@media screen and (min-width:1440px){
+    #OMR .omrFirst-img{
+        height:450px;
+        line-height:450px;
+    }
+    #OMR .omr_trt{
+        height:225px;
+        /*border-right:2px solid #F8F8F8;*/
+        /*border-bottom:2px solid #F8F8F8;*/
+    }
+    /*第三部分*/
+    #OMR .orm-third .omr-left .omr_trt{
+        height:368px;
+    }
+    #OMR .orm-third .omrThird-text .omr_trt{
+        /*border-top:none;*/
+        height:368px;
+    }
+}
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+    #OMR .omrFirst-img{
+        height:500px;
+        line-height:500px;
+    }
+    #OMR .omr_trt{
+        height:250px;
+        /*border-right:2px solid #F8F8F8;*/
+        /*border-bottom:2px solid #F8F8F8;*/
+    }
+    /*第三部分*/
+    #OMR .orm-third .omr-left .omr_trt{
+        height:418px;
+    }
+    #OMR .orm-third .omrThird-text .omr_trt{
+        /*border-top:none;*/
+        height:418px;
+    }
+}
+@media screen and (max-width: 1279px){
+    #OMR .omrFirst-img{
+        height:600px;
+        line-height:600px;
+    }
+    #OMR .omr_trt{
+        height:300px;
+        /*border-right:2px solid #F8F8F8;*/
+        /*border-bottom:2px solid #F8F8F8;*/
+    }
+    /*第三部分*/
+    #OMR .orm-third .omr-left .omr_trt{
+        height:548px;
+    }
+    #OMR .orm-third .omrThird-text .omr_trt{
+        /*border-top:none;*/
+        height:548px;
+    }
+}
+#OMR .omr_trt div{
+    display:inline-block;
+}
+#OMR .omr_trt div:first-child{
+   float: left;
+}
+#OMR .omr_trt .title{
+    color:#78AFEB;
+    width:107px;
+    font-size:1.4em;
+    border-bottom:1.5px solid #82BFFF;
+    text-align: left;
+}
+#OMR .omr_trt .intro-text{
+    margin-top:15px;
+    font-size:1.2em;
+    color:#868686;
+    text-align: left;
+}
+/*第二部分*/
+#OMR .omr-left{
+    width:25%;
+}
+#OMR .omr-left .omr_trt{
+    width:100%;
+    border-top:2px solid #F8F8F8;
+}
+#OMR .omrSecond-text .omr_trt div:first-child{
+    border-right:2px solid #F8F8F8;
+}
+#OMR .omrSecond-text .omr_trt div:last-child{
+    border-right:none;
+}
+/*第三部分*/
+#OMR .orm-third .omr-left .omr_trt{
+    border-top:none;
+    /*height:368px;*/
+}
+#OMR .orm-third .omrThird-text .omr_trt{
+    /*border-top:none;*/
+    /*height:368px;*/
+}
+.orm-third .omr-left  .omr_trt .title{
+    width:133px;
+}
+/*第四部分--售后服务*/
+#OMR .omrFour-text{
+    /*border:1px solid red;*/
+    width:100%;
+}
+#OMR .omrFour-text .omr_trt{
+    width:100%;
+    height:174px;
+    border-right:none;
+    padding-left:20px;
+}
+#OMR .omrFour-text .omr_trt .intro-text{
+    display:block;
+    width:100%;
+}
+
+/*北京贝格特 ARM99*/
+#OMR .conSecond{
+
+}
+#OMR .second-con{
+    overflow: auto;
+    zoom:1;
+}
+#OMR .conSecond-text>div{
+    height:174px;
+}
+#OMR .conSecond .conSecond-text .omr_trt{
+    height:174px;
+    border-right:none;
+    border-bottom:none;
+}
+#OMR .second-con .omr_text{
+    text-align: left;
+}
+#OMR .second-con .omr_text .omr_trt{
+    padding-top:0px;
+    border-right:none;
+    border-bottom:none;
+}
+#OMR .second-con .omr_text .last-trt{
+    height:280px;
+    width:100%;
+}
+#OMR .second-con .omr_text .last-trt .intro-text{
+    width:100%;
+}
+#OMR .second-con .omr_text .last-trt .intro-text span:first-child{
+   /*border:1px solid red;*/
+    margin-right:30px;
+}
+#OMR .conCenter{
+    /*border:1px solid red;*/
+    margin:0 100px;
+}

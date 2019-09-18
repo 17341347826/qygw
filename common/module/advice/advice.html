@@ -1,0 +1,57 @@
+<div class="all">
+    <div class="advice">
+        <!--咨询电话-->
+        <a class="advice-phone" ms-mouseenter="@mouse_in(1)" ms-mouseleave="@mouse_in(-1)">
+            <img src="common/img/advice-phone.png"/>
+            <span>咨询电话</span>
+        </a>
+        <!--在线咨询-->
+        <a class="advice-qq" href="http://wpa.qq.com/msgrd?v=3&uin=840169418&site=qq&menu=yes" target="_black">
+            <img src="common/img/advice-qq.png"/>
+            <span>在线咨询</span>
+        </a>
+        <!--邮箱-->
+        <a class="advice-mail" ms-mouseenter="@mouse_in(2)" ms-mouseleave="@mouse_in(-1)">
+            <img src="common/img/advice-mail.png"/>
+            <span>邮箱</span>
+        </a>
+        <!--意见反馈-->
+        <!--<a><img src="../../common/img/advice3.jpg"/></a>-->
+    </div>
+    <!--咨询电话弹出层-->
+    <div class="popup-phone popup" ms-visible="@show_index == 1" ms-mouseenter="@mouse_in(1)" ms-mouseleave="@mouse_in(-1)">
+        <div id="popup-phone">
+            <div>
+                <span style="text-align: left;font-size:1.2em;">我们随时准备为您提供服务</span>
+                <div style="text-align: left;">
+                    <!--<span style='font-snews1ze:1.2em;margin-top:-20px;display:inline-block'>联系兴唐</span>-->
+                    <div style='font-size:1.2em;'>
+                        <span style='font-size:1.4em;margin-right:20px;color:#1E4999;' class='am-icon-volume-control-phone'></span>
+                        致电兴唐技术
+                    </div>
+                    <div style='font-size:1.2em;margin-left:40px;'>
+                        400-028-4088
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--邮箱弹出层-->
+    <div class="popup-mail popup" ms-visible="@show_index == 2" ms-mouseenter="@mouse_in(2)" ms-mouseleave="@mouse_in(-1)">
+        <div id="popup-mail">
+            <div>
+                <span style="text-align: left;font-size:1.2em;">我们随时准备为您提供服务</span>
+                <div style="text-align: left;">
+                    <!--<span style='font-snews1ze:1.2em;margin-top:-20px;display:inline-block'>联系兴唐</span>-->
+                    <div style='font-size:1.2em;'>
+                        <span style='font-size:1.4em;margin-right:20px;color:#1E4999;' class='am-icon-envelope'></span>
+                        联系兴唐技术
+                    </div>
+                    <div style='font-size:1.2em;margin-left:40px;'>
+                        xt@uptang.com.cn
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

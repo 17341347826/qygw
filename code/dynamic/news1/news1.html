@@ -1,0 +1,39 @@
+<div id="news1" class="container am-g" ms-important="news1">
+    <!--头部-->
+    <div class="header">
+        <!-- banner-->
+        <div class="banner">
+            <img src="../../../common/img/newsBanner.jpg" />
+        </div>
+        <!--通知-->
+        <xmp ms-widget="{is:'ms-ele-notice'}"></xmp>
+    </div>
+    <!--内容-->
+    <div class="content">
+        <!--站点地图-->
+        <!--兴唐新闻-->
+        <xmp ms-widget="{is:'ms-ele-title',menuName:'动态',firstPath:'newsCenter',pageName:'>兴唐新闻',pagePath:'newsCenter'}"></xmp>
+        <!--行业动态-->
+        <!--<xmp ms-widget="{is:'ms-ele-title',menuName:'动态',firstPath:'newsCenter',pageName:'>行业动态',pagePath:'policyNews'}"></xmp>-->
+        <!--新闻信息-->
+        <div class="newsCon am-text-center">
+            <h2 class="news-title" style="font-weight: 900;margin-bottom: 15px">
+                {{@new_info.news_title}}
+            </h2>
+            <div class="news-date">
+                {{@new_info.create_time.slice(0,4)}}.{{@new_info.create_time.slice(5,7)}}.{{@new_info.create_time.slice(8,10)}}
+            </div>
+            <div class="news-con">
+                <p class="news_content" ms-html="@new_info.news_content"></p>
+
+            </div>
+            <!--点赞-->
+            <div class="thumbs float-right">
+                <span class="icon am-icon-thumbs-o-up thumbs-up" id="dz" ms-click="@thumbs()">{{@new_info.click_praise_num}}</span>
+            </div>
+        </div>
+        <!--侧边导航-->
+        <xmp ms-widget="{is:'ms-ele-advice'}"></xmp>
+    </div>
+
+</div>

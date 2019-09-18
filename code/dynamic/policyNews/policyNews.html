@@ -1,0 +1,71 @@
+<div class="container am-g" ms-important="policyNews" id="policyNews">
+    <!--头部-->
+    <div class="header">
+        <!-- banner-->
+        <div class="banner" style="width:100%;">
+            <div style="width:100%;" class="slide am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
+                <!--<ul ms-if="!@moduleImage.length" class="am-slides" style="width:100%;">-->
+                    <!--<li style="width:100%;"><img src="../../../common/img/policy_banner.jpg" /></li>-->
+                <!--</ul>-->
+                <ul class="am-slides" style="width:100%;">
+                    <!--ms-for:($idx,el) in @moduleImage-->
+                    <li style="width:100%;cursor: pointer">
+                        <img style="max-height: 900px;width: 100%;" ms-attr="{src: @api + 'file/get?img=' + el.image_url[0].guid}"
+                             ms-click="@gotoPage(el)"/>
+                    </li>
+                    <!--ms-for-end:-->
+                </ul>
+            </div>
+        </div>
+        <!--通知-->
+        <xmp ms-widget="{is:'ms-ele-notice'}"></xmp>
+    </div>
+    <!--内容-->
+    <div class="content">
+        <!--站点地图-->
+        <xmp ms-widget="{is:'ms-ele-title',menuName:'动态',firstPath:'policyNews',pageName:'>行业资讯',pagePath:'policyNews'}"></xmp>
+        <div class="conContent">
+            <!--新闻信息-->
+            <div>
+                <!--ms-for:($idx,el) in @newsList-->
+                <div class="conPerson am-text-center">
+                    <div ms-click="@page_turn(el)">
+                        <!--左边部分-->
+                        <div class="newsLeft">
+                            <div class="dateDay">{{el.create_time.slice(8,10)}}</div>
+                            <div class="dateLine"></div>
+                            <div class="dateYear">{{el.create_time.slice(0,4)}}/{{el.create_time.slice(5,7)}}</div>
+                        </div>
+                        <!--中间部分-->
+                        <div class="newsCenter">
+                            <img ms-visible="el.get_first_picture_flag != '1' || !@imgList[$idx]" src="../../../common/img/policy_banner.jpg"/>
+                            <img ms-if="el.get_first_picture_flag == '1' && @imgList[$idx]" ms-attr="{src: @imgList[$idx][1]}"/>
+                        </div>
+                        <!--右边部分-->
+                        <div class="newsRight">
+                            <div class="newsRight_title">{{el.news_title}}</div>
+                            <div class="newsRight_con">
+
+                                <p class="news_content_hide">
+                                    <span style="visibility: hidden">哈哈</span>
+                                    {{el.intercepted_content}}
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="newsRight_footer float-right">
+                        <!--点赞-->
+                        <div class="thumbs float-right">
+                            <span class="icon am-icon-thumbs-o-up thumbs-up" ms-attr="{id: 'dz_' + $idx}" ms-click="@thumbs($idx, el)">{{el.click_praise_num}}</span>
+                        </div>
+                    </div>
+                </div>
+                <!--ms-for-end:-->
+            </div>
+        </div>
+        <!--侧边导航-->
+        <xmp ms-widget="{is:'ms-ele-advice'}"></xmp>
+    </div>
+
+</div>

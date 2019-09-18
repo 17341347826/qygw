@@ -1,0 +1,168 @@
+/*banner*/
+.banner img{
+    width: 100%;
+    display: block;
+}
+/*内容*/
+#contactUs .contentUs{
+    /*border:1px solid red;*/
+    padding:0 84px 30px;
+    background-color:#F7F7F7;
+    position: relative;
+}
+/*联系我们*/
+#contactUs .conMain{
+    /*border:1px solid blue;*/
+}
+/*第一部分*/
+#contactUs .first_title{
+    /*margin-bottom:40px;*/
+}
+#contactUs .first_title .title{
+    color:#1e53a3;
+    font-size:28px;
+    margin-bottom:20px;
+}
+#contactUs .first_title .title span{
+    padding:0 8px;
+}
+#contactUs .first_title .title span:first-child{
+    border-right:1px solid #1e53a3;
+}
+#contactUs .first_title .english_title{
+    font-size:16px;
+    /*font-weight:600;*/
+}
+#contactUs .first_title .title_css{
+    color:#ababab;
+    font-size:16px;
+}
+#contactUs .conMain .title_css span{
+    padding:0 4px;
+}
+/*!*第二部分*!*/
+#contactUs .sec_con{
+    /*border:1px solid red;*/
+    overflow: hidden;
+    padding:35px 40px 15px;
+    position: relative;
+    /*text-align: center;*/
+    /*width:1050px;*/
+    margin:0 auto;
+}
+#contactUs .sec_con>div{
+    /*width:225px;*/
+    width:23%;
+    height:140px;
+    display:inline-block;
+    float:left;
+    background-color: #fff;
+    /*border:1px solid red;*/
+    /*margin:0 18px;*/
+    margin:0 1%;
+    padding:23px 0;
+    position: relative;
+}
+#contactUs .sec_con div img{
+    width:45px;
+}
+#contactUs .sec_con div div{
+    /*position:absolute;*/
+    margin-top:25px;
+    color:#2454A2;
+}
+/*第三部分-插件*/
+#contactUs .right {
+    width: 100%;
+    height: 500px;
+    padding: 20px 20px;
+    box-sizing: border-box;
+}
+
+#contactUs .left {
+    height:400px;
+}
+
+#contactUs .container {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+#contactUs .des {
+    float: right;
+    width: 48%;
+    height: 100%;
+    border: 1px dashed #000;
+    box-sizing: border-box;
+}
+
+#contactUs .info {
+    margin-top: 20px;
+    padding-left: 20px;
+    color: #cc5522;
+    font-size: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/*pre {*/
+    /*font-family: "微软雅黑";*/
+    /*font-size: 14px;*/
+/*}*/
+
+#contactUs .title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #cc5522;
+}
+#contactUs .content{
+    font-size: 13px;
+    color: #333;
+    margin-top: 6px;
+}
+/*地图*/
+#contactUs .third_con{
+    padding:0 50px;
+}
+#contactUs .third_con img{
+    width:100%;
+}
+
+
+
+
+/********轮播********/
+/*头部*/
+.header {
+    position: relative;
+    overflow: hidden;
+}
+/*轮播焦点*/
+.am-slider-default .am-control-nav {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+}
+
+.am-slider-default .am-control-nav li a {
+    width: 20px;
+    height: 6px;
+    border-radius: 0;
+    margin-top: -30px;
+}
+
+/*选中*/
+.am-slider-default .am-control-nav li a.am-active {
+    background-color: #f1f2f6;
+}
+
+/*未选中*/
+.am-slider-default .am-control-nav li a {
+    background-color: #1e2c6a;
+}
+
+.am-slider-default {
+    margin: 0;
+}
+

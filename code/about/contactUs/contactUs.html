@@ -1,0 +1,101 @@
+ <div id="contactUs" class="am-g" ms-important="contactUs">
+        <!--头部-->
+        <div class="header">
+            <!-- banner-->
+            <div class="banner" style="width:100%;">
+                <div style="width:100%;" class="slide am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
+                    <!--<ul ms-if="!@moduleImage.length" class="am-slides" style="width:100%;">-->
+                        <!--<li style="width:100%;"><img src="../../../common/img/contactUsBanner.jpg" /></li>-->
+                    <!--</ul>-->
+                    <ul class="am-slides" style="width:100%;">
+                        <!--ms-for:($idx,el) in @moduleImage-->
+                        <li style="width:100%;cursor: pointer">
+                            <img style="max-height: 900px;width: 100%;" ms-attr="{src: @api + 'file/get?img=' + el.image_url[0].guid}"
+                                 ms-click="@gotoPage(el)"/>
+                        </li>
+                        <!--ms-for-end:-->
+                    </ul>
+                </div>
+            </div>
+            <!--通知-->
+            <xmp ms-widget="{is:'ms-ele-notice'}"></xmp>
+        </div>
+        <!--内容-->
+        <div class="contentUs">
+            <!--站点地图-->
+            <xmp ms-widget="{is:'ms-ele-title',menuName:'关于',firstPath:'uptangIntro',pageName:'>联系我们',pagePath:'contactUs'}"></xmp>
+            <!--联系我们-->
+            <div class="conMain am-text-center">
+                <div class="first_title">
+                    <div class="title">
+                        <span>联系我们</span>
+                        <span class="english_title">CONTACT US</span>
+                    </div>
+                    <div class="title_css">
+                        <span>科技服务教育</span>
+                        <span>理念引导教育</span>
+                        <span>办学实践教育</span>
+                    </div>
+                </div>
+                <div class="sec_con">
+                    <div class="float-left">
+                        <img src="../../common/img/contactUs4.png"/>
+                        <div>400-028-4088</div>
+                    </div>
+                    <div>
+                        <img src="../../common/img/contactUs2.png"/>
+                        <div>+8628-8454-6598/97/96</div>
+                    </div>
+                    <div>
+                        <img src="../../common/img/contactUs3.png"/>
+                        <div style="margin-top:36.5px;">xt@uptang.com.cn</div>
+                    </div>
+                    <div class="float-right">
+                        <img src="../../common/img/contactUs1.png"/>
+                        <div>www.uptang.com.cn</div>
+                    </div>
+                </div>
+                <!--插件-->
+                <div class="third_con">
+                    <!--<div class="right">-->
+                        <!--<div id="container2" class="container"></div>-->
+                    <!--</div>-->
+                    <img src="../../../common/img/contanct_map.jpg"/>
+                </div>
+            </div>
+            <!--侧边导航-->
+            <xmp ms-widget="{is:'ms-ele-advice'}"></xmp>
+        </div>
+    </div>
+<!--&lt;!&ndash;百度地图单点标注&ndash;&gt;-->
+<!--<script src="http://api.map.baidu.com/api?v=2.0&ak=A1LU7iHS0avqQwPLAxbhKn0UYSQCuRVH"></script>-->
+<!--<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>-->
+<!--<script src="../../../common/lib/jquery.baiduMap.min.js"></script>-->
+<!--&lt;!&ndash;地图信息录入&ndash;&gt;-->
+<!--<script type="text/javascript">-->
+    <!--new BaiduMap({-->
+        <!--id: "container2",-->
+        <!--title: {-->
+            <!--text: "成都兴唐技术信息有限公司",-->
+            <!--className: "title"-->
+        <!--},-->
+        <!--content: {-->
+            <!--className: "content",-->
+            <!--text: ["地址：成都市武侯区长华路19号万科汇智中心", "电话：400-028-4088"]-->
+        <!--},-->
+        <!--point: {-->
+            <!--lng:'104.084933',-->
+            <!--lat:"30.610675"-->
+        <!--},-->
+        <!--level: 15,-->
+        <!--zoom: true,-->
+        <!--type: ["地图", "卫星", "三维"],-->
+        <!--width: 320,-->
+        <!--height: 70,-->
+        <!--icon: {-->
+            <!--url: "../../common/img/icon.png",-->
+            <!--width: 36,-->
+            <!--height: 36-->
+        <!--}-->
+    <!--});-->
+<!--</script>-->

@@ -1,0 +1,194 @@
+<div id="newsManage" class="am-g" ms-important="newsManage">
+    <!--头部-->
+    <div class="header">
+        <div class="banner" style="height: 166px;background-color: #1e2c6a">
+        </div>
+    </div>
+    <!--内容-->
+    <div class="content">
+        <!--站点地图-->
+        <xmp ms-widget="{is:'ms-ele-title',menuName:'新闻',firstPath:'newsCenter',pageName:'>新闻管理',pagePath:'newsManage'}"></xmp>
+
+
+
+
+        <!--确认弹框-->
+        <div class="am-modal am-modal-confirm" tabindex="-1" id="my-confirm">
+            <div class="am-modal-dialog">
+                <div class="am-modal-hd">{{dialog_title}}</div>
+
+                <div class="am-modal-footer">
+                    <span class="am-modal-btn" ms-click="@onCancel">取消</span>
+                    <span class="am-modal-btn" ms-click="@onConfirm">确定</span>
+                </div>
+            </div>
+        </div>
+
+        <div ms-visible="!@add_page" class="am-scrollable-horizontal">
+
+            <div style="margin: 25px 0;text-align: left">
+                <span>新闻类型： </span>
+                <label>
+                    <select  data-placeholder="请选择" style="width: 175px;height: 24px;margin-right: 50px;"
+                            id="news_type" ms-change="@getNewType('news_type', 1)">
+                        <option value="" label="全部"></option>
+                        <option value="1" label="兴唐新闻"></option>
+                        <option value="2" label="行业资讯"></option>
+                    </select>
+                </label>
+                <span>新闻标题： </span>
+                <input type="text" style="width: 175px; " ms-duplex="new_title" ms-on-change="@queryNewsByTitle">
+                <div style="float: right;">
+                    <button style="margin-right: 50px;" type="button" class="am-btn am-btn-default am-round am-btn-xs" ms-click="@onIssueInform">发布通知</button>
+                    <button style="margin-right: 50px;" type="button" class="am-btn am-btn-default am-round am-btn-xs" ms-click="@batchIssueNews">批量发布新闻</button>
+                    <button style="margin-right: 50px;" type="button" class="am-btn am-btn-default am-round am-btn-xs" ms-click="@batchRemove">批量删除</button>
+                    <button type="button" class="am-btn am-btn-default am-round am-btn-xs" ms-click="@onNewUpdate('')">添加新闻</button>
+                </div>
+            </div>
+
+            <table class="am-table am-table-bordered am-table-centered">
+                <thead>
+                <tr>
+                    <th><input id="all_check" ms-click="@onAllCheck" type="checkbox"/>全选</th>
+                    <th>序号</th>
+                    <th>新闻标题</th>
+                    <th>新闻类型</th>
+                    <th>发布状态</th>
+                    <th>通知管理</th>
+                    <th>创建时间</th>
+                    <th style="width: 100px;">首页推荐</th>
+                    <th>首页热门</th>
+                    <th style="min-width: 166px;">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!--ms-for:($idx,el) in @news_info-->
+                <tr ms-visible="@news_info.length">
+                    <td><input ms-attr="{id : @check + $idx}" ms-click="@check_list($event, el, (@check + $idx))" type="checkbox"/></td>
+                    <td>{{$idx + 1}}</td>
+                    <td>{{el.news_title}}</td>
+                    <td>{{el.news_type == 1 ? "兴唐新闻" : "行业资讯"}}</td>
+                    <td>
+                        <span ms-visible="el.status == -1">无效</span>
+                        <span ms-visible="el.status == 0">未发布</span>
+                        <span ms-visible="el.status == 1">已发布</span>
+                    </td>
+                    <td>{{el.notice_item_flag == 1 ? "是" : "否"}}</td>
+                    <td>{{el.create_time}}</td>
+                    <td>
+                        <div class="am-btn-group doc-js-btn-1" data-am-button>
+                            <label :class="[@am_btn, @am_btn_primary, @am_btn_xs, (el.home_page_recommend_flag == 1 ? @am_active : '')]"
+                                   ms-click="@recommend('1', el, $idx)" ms-attr="{id: 'option' + $idx}">
+                                <input type="radio" name="options" value="1">是
+                            </label>
+                            <label :class="[@am_btn, @am_btn_primary, @am_btn_xs, (el.home_page_recommend_flag == 0 ? @am_active : '')]"
+                                   ms-click="@recommend('0', el, $idx)" ms-attr="{id: 'option_no' + $idx}">
+                                <input type="radio" name="options" value="2">否
+                            </label>
+                        </div>
+                    </td>
+                    <td>
+                        <input type="checkbox" ms-attr="{checked: el.home_page_hot_flag == 1 ? true: false, id: 'hot' + $idx}" ms-click="onChangeHot(el, $idx)">
+                    </td>
+                    <td>
+                        <ul class="am-avg-sm-4 am-thumbnails">
+                            <li><span ms-click="@tcClick(0, el)" style="cursor: pointer">发布</span></li>
+                            <li><span ms-click="@onPreview(el)" style="cursor: pointer">预览</span></li>
+                            <li><span ms-click="@onNewUpdate(el)" style="cursor: pointer">编辑</span></li>
+                            <li><span ms-click="@tcClick(3, el, $idx)" style="cursor: pointer">撤回</span></li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <!--ms-for-end:-->
+                <tr ms-visible="@news_info.length == 0">
+                    <td colspan="10">
+                        <span>无数据</span>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+            <ms-ele-pagination ms-widget="{pageSize:@query_list.page_size,currentPage:@currentPage,total:@total,currentChange:@currentChange}"></ms-ele-pagination>
+            <!--<ul class="am-pagination am-pagination-centered">-->
+                <!--<li id="page_add" class="am-disabled"><a href="javascript:void(0);" ms-click="@onPageAdd('page_add')">上一页;</a></li>-->
+                <!--<li class="am-active" ms-attr="{id : 'page' + $idx}" ><a href="javascript:void(0);" ms-click="@onChangePage($idx, 'page' + $idx)">{{$idx + 1}}</a></li>-->
+                <!--<li id="page_reduce"><a href="javascript:void(0);" ms-click="@onPageReduce('page_reduce')">下一页;</a></li>-->
+            <!--</ul>-->
+        </div>
+
+        <div ms-visible="@add_page" class="am-scrollable-horizontal system_width">
+
+
+            <h2>{{add_or_update}}</h2>
+            <div class="am-g margin_sx mb_25">
+                <div class="am-u-lg-5">
+                    <div class="am-input-group">
+                        <span>新闻类型:</span>
+                        <label>
+                            <select style="width: 175px; margin-right: 75px;" ms-change="@getNewType('news_type_add', 2)"
+                                    id="news_type_add">
+                                <option style="visibility: hidden" value="" ms-attr="{label: @news_type_update}"></option>
+                                <option value="1" label="兴唐新闻"></option>
+                                <option value="2" label="行业资讯"></option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="am-g margin_sx mb_25">
+                <div class="am-u-lg-5">
+                    <div class="am-input-group">
+                        <span class="am-input-group-label">新闻标题: </span>
+                        <input type="text" class="am-form-field" placeholder="" ms-duplex="new_info_title">
+                    </div>
+                </div>
+            </div>
+
+
+            <div style="text-align: left">
+                <span>新闻内容: </span>
+
+
+                    <div id="summernote"></div>
+
+
+
+                <div style="width: 60%;">
+                    <input ms-click="@titlePage(1)" type="checkbox" ms-attr="{checked: row_info.get_first_picture_flag == 1 ? true: false}"/>
+                    是否获取第一张图片为标题图片<br>
+
+                    <!--<input ms-click="@titlePage(3)" type="checkbox" ms-attr="{checked: row_info.home_page_recommend_flag == 1 ? true: false}"/>-->
+                    <!--是否为首页推荐 <br>-->
+
+                    <input ms-click="@titlePage(4)" type="checkbox" ms-attr="{checked: row_info.intercepted_content_flag == 1 ? true: false}"/>
+                    是否截取内容前 <input type="text" style="width: 45px" ms-duplex="@intercepted_word_num"> 字为摘要 <br>
+                </div>
+                <div align="center">
+                    <button type="button" class="am-btn am-btn-default" ms-click="@add_page = false">返回</button>
+                    <span style="margin: 0 75px"></span>
+                    <button type="button" class="am-btn am-btn-primary" ms-click="@onAddConfirm">保存</button>
+                </div>
+            </div>
+        </div>
+
+        <!--预览-->
+        <div class="am-modal am-modal-confirm" tabindex="-1" id="my-preview">
+            <div class="am-modal-dialog">
+                <div id="preview_title" style="margin-bottom: 50px; font-size: 24px">
+
+                </div>
+                <div id="preview_content">
+
+                </div>
+                <div class="am-modal-footer">
+                    <span class="am-modal-btn" ms-click="@onBack">返回</span>
+                </div>
+            </div>
+        </div>
+
+        <!--侧边导航-->
+        <xmp ms-widget="{is:'ms-ele-advice'}"></xmp>
+    </div>
+</div>

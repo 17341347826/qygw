@@ -1,0 +1,190 @@
+<div ms-important="home" class="home" id="home">
+    <div class="home-container am-cf">
+        <!-- 头部-->
+        <div class="header">
+            <!-- banner-->
+            <div class="banner" style="width:100%;">
+                <div style="width:100%;" class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
+                    <!--<ul ms-if="!@moduleImage.length" class="am-slides" style="width:100%;">-->
+                        <!--<li style="width:100%;"><img style="width: 100%" src="common/img/bannerThird.jpg" /></li>-->
+                        <!--<li style="width:100%;"><img style="width: 100%" src="common/img/bannerSec.jpg" /></li>-->
+                        <!--<li style="width:100%;"><img style="width: 100%" src="common/img/banner.jpg" /></li>-->
+                    <!--</ul>-->
+                    <ul class="am-slides" style="width:100%;">
+                        <!--ms-for:($idx,el) in @moduleImage-->
+                        <li style="width:100%;cursor: pointer">
+                            <img style="width: 100%;max-height: 900px" ms-attr="{src: @api + 'file/get?img=' + el.image_url[0].guid}"
+                                ms-click="@gotoPage(el)"/>
+                        </li>
+                        <!--ms-for-end:-->
+                    </ul>
+                </div>
+            </div>
+            <!--通知-->
+            <xmp ms-widget="{is:'ms-ele-notice'}"></xmp>
+        </div>
+        <!-- 内容-->
+        <div class="content">
+            <!--公司简介-->
+            <div class="conFirst am-center conPerson">
+                <div class="first_title">
+                    <div id="homeVideo" class="title">
+                        <span>公司简介</span>
+                        <span class="english_title">COMPANY PROFILE</span>
+                    </div>
+                    <div class="title_css">
+                        <span>科技服务教育</span>
+                        <span>理念引导教育</span>
+                        <span>办学实践教育</span>
+                    </div>
+                    <a name="video"></a>
+                </div>
+                <div class="vPlay" id="vPlay">
+                    <!-- controls:向用户显示控件，比如播放按钮-->
+                    <div id="switch" class="switch" ms-on-click="@video_play">
+                        <img src="common/img/videoInit.png"/>
+                    </div>
+                    <video class="pause" id="videoPlay" ms-on-click="@video_play()"
+                           src="http://qiniu.xtyun.net/video.mp4" width="100%"
+                           controls loop preload="none"></video>
+                </div>
+            </div>
+            <!--产品展示-->
+            <div class="conSecond conPerson">
+                <div class="first_title">
+                    <div class="title">
+                        <span id="productTitle">产品展示</span>
+                        <span class="english_title">PRODUCT DISPLAY</span>
+                    </div>
+                    <div class="title_css">
+                        <span>让智慧教育常态化</span>
+                        <span>大数据引领新未来</span>
+                    </div>
+                </div>
+                <div class="sec_con">
+                    <div class="lunbo">
+                        <!--<div id="imgList" style="width:3260px;margin-left:-40px;border:1px solid red;">-->
+                         <div id="imgList" style="width:2380px;margin-left:-40px;">
+                            <ul>
+                                <!--ms-for:($idx,el) in @productThreeList-->
+                                <!--网上阅卷系统--替补-->
+                                <li ms-attr="{id: 'imgCard' + $idx}" ms-mouseenter="@li_hover('#imgCard' + $idx)" ms-mouseleave="@li_leave('#imgCard' + $idx)" ms-click="@page_turn(el)">
+                                    <span><img src="common/img/treeLodo3.png"/></span>
+                                    <p ms-visible="@p_type!=$idx">{{el.product_name}}
+                                        <span ms-visible="!el.home_page_intro"> 布局灵活 | 操作简单 | 功能强大</span>
+                                        <span ms-visible="el.home_page_intro">
+                                            <span style="display: inline-block;width: 175px;height: 22px;overflow: hidden" ms-html="el.home_page_intro">
+                                            </span>
+                                        </span>
+                                    </p>
+                                    <p ms-visible="@p_type==$idx" style="background-color: transparent;">
+                                        <button ms-if="el.fast_login_addr != '' && el.fast_login_addr != 0" ms-click="@onGotoProductLogin(el)"
+                                                style="font-size: 14px;position: absolute;margin: 180px 0;line-height: 25px;transform: translateX(-63px);" id="product_login">
+                                            快 速 登 录
+                                            <!--<b> 〉</b>-->
+                                        </button>
+                                    </p>
+                                    <p ms-visible="@p_type==$idx">{{el.product_name}}
+                                        <span ms-visible="!el.home_page_intro">简单的使用操作模式<br/>友好的系统操作界面<br/>多样的统计分析功能<br/>......</span>
+                                        <span ms-visible="el.home_page_intro">
+                                            <span style="display: inline-block;width: 150px;" ms-html="el.home_page_intro"></span>
+                                        </span>
+                                    </p>
+                                    <img ms-visible="!el.home_page_picture || el.home_page_picture == '[]'" src="./common/img/treeBanner6.png" alt="6">
+                                    <img ms-visible="el.home_page_picture && el.home_page_picture != '[]'" ms-attr="{src: el.home_page_picture}"
+                                         onerror="this.src='./common/img/treeBanner6.png'" alt="无图片或图片服务异常" style="width: 300px;height: 430px;">
+                                </li>
+                                <!--ms-for-end:-->
+                            </ul>
+                        </div>
+                    </div>
+                    <!--<div id="pre">&lt;</div>-->
+                    <!--<div id="next">&gt;</div>-->
+                    <div ms-visible="@allProductList.length > 3" id="pre"><img src="common/img/prev.png" ms-click="@onPre"/></div>
+                    <div ms-visible="@allProductList.length > 3" id="next"><img src="common/img/next.png" ms-click="@onNext"/></div>
+                </div>
+            </div>
+            <!--新闻中心-->
+            <div class="conThird conPerson">
+                <div class="first_title">
+                    <div class="title">
+                        <span id="newsCenter">新闻中心</span>
+                        <span class="english_title">NEWS CENTER</span>
+                    </div>
+                    <div class="title_css">
+                        <!--<span>科技服务教育</span>-->
+                        <!--<span>理念引导教育</span>-->
+                        <!--<span>办学实践教育</span>-->
+                        <span>第一时间了解最新行业动态</span>
+                    </div>
+                </div>
+
+                <div class="thirdTop">
+                    <!--ms-for:($idx,el) in @hotNewsInfo-->
+                    <div style="visibility: hidden;height: 0;" id="hot_new_img"></div>
+                    <div class="third_left">
+                        <img ms-visible="el.get_first_picture_flag != '1' || !@imgList" src="common/img/news.jpg"/>
+                        <img ms-visible="el.get_first_picture_flag == '1' && @imgList" ms-attr="{src: @imgList}"/>
+                    </div>
+
+                    <div class="third_right float-right" style="overflow: hidden;min-width: 506px">
+                        <div class="tRight_title">
+                            <span>|</span>
+                            <span><a href="javascript:" ms-click="@newsMoreDetails(el.id)">{{el.news_title}}</a></span>
+                            <span class="news_date">{{el.create_time.slice(0,4)}}.{{el.create_time.slice(5,7)}}.{{el.create_time.slice(8,10)}}</span>
+                        </div>
+                        <div class="tRight_con">
+                            <p><span style="visibility:hidden">哈哈</span>
+                                <span ms-visible="el.intercepted_content_flag == 1" ms-html="el.intercepted_content.slice(0, el.intercepted_word_num) + '...'"></span>
+                                <span ms-visible="el.intercepted_content_flag != 1" ms-html="el.intercepted_content.slice(0, 450) + '...'"></span>
+                            </p>
+                        </div>
+                        <div class="more" style="float: right;">
+                            <a href="javascript:" ms-click="@newsMoreDetails(el.id)">
+                                详情&nbsp;&nbsp;
+                                <span class="am-icon-caret-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!--ms-for-end:-->
+                </div>
+
+                <!--新闻中心下面-->
+                <div class="thirdBottom">
+                    <!--ms-for:($idx,el) in @recommendNewsInfo-->
+                    <div style="width: 35%;min-width: 490px;display: inline-block">
+                        <div class="Bthird_class right_margin" ms-click="@newsMoreDetails(el.id)" style="float:left;">
+                            <div class="Bthird_left">
+                                <span
+                                    class="Bthird_leftT">{{el.create_time.slice(5,7)}}/{{el.create_time.slice(8,10)}}</span>
+                                <span class="Bthird_year">{{el.create_time.slice(0,4)}}</span>
+                            </div>
+                            <div class="Bthird_right news_content_hide">
+                                <div style="overflow: hidden;" class="Bthird_rightT">{{el.news_title}}</div>
+                                <span style="overflow: hidden;display: block;" class="Bthird_con" ms-visible="el.intercepted_content_flag == '1' && el.intercepted_word_num != 0"
+                                      ms-text="el.intercepted_content.slice(0, el.intercepted_word_num) + '...'"></span>
+                                <span style="overflow: hidden;display: block;" class="Bthird_con" ms-visible="el.intercepted_content_flag != '1' || el.intercepted_word_num == 0"
+                                      ms-text="el.intercepted_content"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--ms-for-end:-->
+
+                    <div ms-visible="@recommendNewsInfo.length % 2 != 0" style="width: 35%;min-width: 490px;display: inline-block">
+
+                    </div>
+
+
+                    <!--<div class="news-more">-->
+                        <!--<a href="#newsCenter">-->
+                            <!--查看更多&nbsp;&nbsp;-->
+                            <!--<span class="am-icon-caret-right"></span>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                </div>
+            </div>
+            <!--侧边导航-->
+            <xmp ms-widget="{is:'ms-ele-advice'}"></xmp>
+        </div>
+    </div>
+</div>

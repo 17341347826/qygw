@@ -1,0 +1,17 @@
+#slideManage .am-scrollable-horizontal {
+    padding: 0 75px;
+    min-width: 1130px;
+}
+#slideManage td img {
+    max-width: 200px;
+}
+
+
+.am-thumbnails>li {
+    padding: 0;
+}
+
+
+#slideManage .statusBar ,#slideManage .webuploader-pick,#slideManage #dndArea p{
+    opacity: 0;
+}

@@ -1,0 +1,9 @@
+#downloadManage .am-scrollable-horizontal {
+    padding: 0 75px;
+    min-width: 1130px;
+}
+
+
+.am-thumbnails>li {
+    padding: 0;
+}

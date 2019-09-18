@@ -1,0 +1,47 @@
+<div id="news3" class="container am-g" ms-important="news3">
+    <!--头部-->
+    <div class="header">
+        <div class="banner" style="height: 166px;background-color: #1e2c6a">
+        </div>
+    </div>
+    <!--内容-->
+    <div class="content">
+        <!--站点地图-->
+        <!--兴唐新闻-->
+        <xmp ms-widget="{is:'ms-ele-title',menuName:'个人中心',firstPath:'newsCenter',personal:'',pagePath:'personal'}"></xmp>
+
+        <div class="content" align="center">
+            <p style="color: #1E53A3;font-size: 20pt;margin: 0 0 58px;">修改密码</p>
+
+            <div style="margin-bottom: 28pt;text-align: right; width: 375pt;">
+                <span style="margin-right: 16px;font-size: 12pt">原密码: </span>
+                <input ms-duplex="@oldPassword" type="password"
+                       style="height: 26pt;width: 224pt;font-size: 10pt;padding-left: 8pt;border: 1pt #E4E4E4 solid;border-radius: 2pt;">
+            </div>
+
+            <div style="margin-bottom: 28pt;text-align: right; width: 375pt;">
+                <span style="margin-right: 16px;font-size: 12pt">新密码: </span>
+                <input ms-duplex="@newPassword" type="password"
+                       style="height: 26pt;width: 224pt;font-size: 10pt;padding-left: 8pt;border: 1pt #E4E4E4 solid;border-radius: 2pt;">
+            </div>
+
+            <div style="margin-bottom: 28pt;text-align: right; width: 375pt;">
+                <span style="margin-right: 16px;font-size: 12pt">确认密码: </span>
+                <input ms-duplex="@verifyPassword" type="password"
+                       style="height: 26pt;width: 224pt;font-size: 10pt;padding-left: 8pt;border: 1pt #E4E4E4 solid;border-radius: 2pt;">
+            </div>
+
+            <div style="margin-bottom: 14pt;text-align: right; width: 375pt;">
+                <button  class="am-btn investment_submit"
+                         style="height: 40pt;width: 290pt;font-size: 16pt;border-radius: 3pt;background-color: #33C1B5;
+                                color: #fff;" ms-click="@updatePassword()">提交</button>
+            </div>
+
+        </div>
+
+
+        <!--侧边导航-->
+        <xmp ms-widget="{is:'ms-ele-advice'}"></xmp>
+    </div>
+
+</div>

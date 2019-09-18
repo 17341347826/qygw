@@ -1,0 +1,104 @@
+/*banner*/
+#isr .banner img{
+    width: 100%;
+    display: block;
+}
+/*内容*/
+#isr .content{
+    /*border:1px solid red;*/
+    /*padding:60px 84px 30px;*/
+    padding:0 0 80px;
+    background-color: #FEFEFE;
+    position: relative;
+    overflow: auto;
+    zoom:1;
+}
+/*内容标题*/
+#isr .conCom{
+    padding:10px 84px;
+    overflow: auto;
+    zoom:1;
+    /*border:1px solid red;*/
+}
+#isr .conCom .conTitle{
+    position: relative;
+    height:120px;
+    /*border:1px solid red;*/
+}
+#isr .conCom .conTitle span{
+    display:inline-block;
+    color:#82BFFF;
+    /*font-weight: bold;*/
+    font-size:1.8em;
+    position: absolute;
+    bottom:10px;
+}
+/*内容内容*/
+#isr .conCenter{
+    margin:28px 0 0;
+}
+/*公有部分操作*/
+#isr .first-con{
+    /*border:1px solid greenyellow;*/
+    overflow: auto;
+    zoom:1;
+}
+#isr .first-con>div{
+    display:inline-block;
+    vertical-align: top;
+}
+#isr .first-con>div>div{
+    display:inline-block;
+    vertical-align: top;
+    float:left;
+}
+#isr .first-con>div>div>div{
+    float:right;
+}
+#isr .isr-left{
+    /*border:1px solid red;*/
+    width:25%;
+    /*height:400px;*/
+    /*line-height: 400px;*/
+}
+#isr .isr-right{
+    /*border:1px solid green;*/
+    width:73%;
+}
+#isr .isr-left img{
+    width:100%;
+}
+#isr .isr-trt{
+    /*border:1px solid red;*/
+    display:inline-block;
+    text-align: center;
+    /*height:200px;*/
+    /*padding:25px 14px 0;*/
+    margin-bottom:30px;
+}
+#isr .isr-right>div:last-child{
+    /*margin-bottom:0;*/
+}
+#isr .isr-trt div{
+    display:inline-block;
+}
+#isr .isr-trt div:first-child{
+    float: left;
+}
+#isr .isr-trt .title{
+    color:#78AFEB;
+    width:107px;
+    font-size:1.4em;
+    border-bottom:1.5px solid #82BFFF;
+    text-align: left;
+}
+#isr .isr-trt .intro-text{
+    margin-top:15px;
+    font-size:1.2em;
+    color:#868686;
+    text-align: left;
+}
+/*智能高速图像扫描阅读机*/
+#isr .imageScan .conCenter .isr-trt:last-child{
+    margin-bottom:0;
+}

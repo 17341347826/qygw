@@ -1,0 +1,120 @@
+#downloadCenter .down_title_input {
+    float: right;
+    font-size: 10pt;
+    color: #A9A9A9;
+    width: 150pt;
+    height: 26pt;
+    padding-left: 15px;
+    border-radius: 4px 0 0 4px;
+    border: 1px solid #E4E4E4;
+    border-right: 1px solid transparent;
+    outline:none
+}
+#downloadCenter .down_title_span {
+    background-color: #fff;
+    border-radius: 0 4px 4px 0;
+    border: 1px solid #E4E4E4;
+    border-left: transparent;
+    width: 17pt;
+    height: 17pt;
+    line-height: 17pt;
+    display: table-cell;
+}
+#downloadCenter .down_title_img {
+    display: inline-block;
+    background-image: url("../../../common/img/search.png");
+    background-size: 100% auto;
+    vertical-align: middle;
+    cursor: pointer;
+    width: 17pt;
+    height: 17pt;
+}
+#downloadCenter #down_ul li {
+    display: block;
+    height: 20pt;
+    margin: 21pt 0;
+    vertical-align: middle;
+}
+#downloadCenter #down_ul li:hover {
+    background-color: #d9d9d9;
+    border-radius: 8pt;
+}
+#downloadCenter #down_ul li .c_span {
+    line-height: 20pt;
+    font-size: 12pt;
+    color: #666666;
+    display: inline-block;
+    text-align: left;
+    overflow: hidden;
+    /*white-space: nowrap;*/
+    text-overflow: ellipsis;
+}
+#downloadCenter #down_ul li img {
+    vertical-align: baseline !important;
+    width: 20pt;
+    float: left;
+}
+#downloadCenter #down_div {
+    padding: 25px 225px 175px;
+    text-align: center;
+}
+#downloadCenter #down_div p {
+    color: #1E53A3;
+    font-size: 20pt;
+}
+#downloadCenter #down_div a {
+    display: inline-block;
+    background-color: transparent;
+    border-radius: 8pt;
+    font-size: 9pt;
+    border: 1pt solid #33C1B5;
+    color: #33C1B5;
+    float: right;
+    width: 64pt;
+    height: 16pt;
+    position: relative;
+    top: 2pt;
+}
+#downloadCenter #down_div a:hover {
+    background-color: #33C1B5;
+    color: #fff;
+}
+button:active {
+    border: none;
+}
+
+
+/********轮播********/
+/*头部*/
+.header {
+    position: relative;
+    overflow: hidden;
+}
+/*轮播焦点*/
+.am-slider-default .am-control-nav {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+}
+
+.am-slider-default .am-control-nav li a {
+    width: 20px;
+    height: 6px;
+    border-radius: 0;
+    margin-top: -30px;
+}
+
+/*选中*/
+.am-slider-default .am-control-nav li a.am-active {
+    background-color: #f1f2f6;
+}
+
+/*未选中*/
+.am-slider-default .am-control-nav li a {
+    background-color: #1e2c6a;
+}
+
+.am-slider-default {
+    margin: 0;
+}
+

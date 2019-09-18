@@ -1,0 +1,233 @@
+/*banner*/
+.banner img{
+    width: 100%;
+    display: block;
+}
+/*内容*/
+#uptangIntro .content{
+    padding:0 0 80px;
+    background-color: #FDFDFD;
+    position: relative;
+}
+/*第一部分*/
+#uptangIntro .first_title{
+    margin-bottom:30px;
+}
+#uptangIntro .first_title .title{
+    color:#1e53a3;
+    font-size:28px;
+    margin-bottom:20px;
+}
+#uptangIntro .first_title .title span{
+    padding:0 8px;
+}
+#uptangIntro .first_title .title span:first-child{
+    border-right:1px solid #1e53a3;
+}
+#uptangIntro .first_title .english_title{
+    font-size:16px;
+    /*font-weight:600;*/
+}
+#uptangIntro .first_title .title_css{
+    color:#ababab;
+    font-size: 15px;
+    margin-top: -16px;
+}
+#uptangIntro .first_title .title_css span{
+    padding:0 4px;
+}
+/*兴唐简介*/
+#uptangIntro .uptang{
+    /*border:1px solid red;*/
+    overflow: auto;
+    zoom:1;
+    padding:50px 84px 30px;
+}
+#uptangIntro .uptangCon{
+    font-size: 1em;
+    /*color:#6A6A6A;*/
+    position: relative;
+}
+/*company-profile*/
+#uptangIntro .company-profile{
+    margin-top:10px;
+    /*字间距*/
+    /*letter-spacing:31.2px;*/
+    width:100%;
+    position: absolute;
+    left:0;
+}
+#uptangIntro .company-profile span{
+    float:left;
+    color:#ECECEC;
+    /*font-size:53px;*/
+    /*margin-left:22.7%;*/
+}
+@media screen and (min-width: 1400px){
+    #uptangIntro .company-profile{
+        /*字间距*/
+        letter-spacing:28px;
+    }
+    #uptangIntro .company-profile span{
+        font-size:53px;
+        margin-left:23%;
+    }
+}
+@media screen and (min-width: 1366px) and (max-width: 1399px) {
+    #uptangIntro .company-profile{
+        /*字间距*/
+        letter-spacing:20px;
+    }
+    #uptangIntro .company-profile span{
+        font-size:53px;
+        margin-left:23.2%;
+    }
+}
+@media screen and (min-width: 1255px) and (max-width: 1365px) {
+    #uptangIntro .company-profile{
+        /*字间距*/
+        letter-spacing:20px;
+    }
+    #uptangIntro .company-profile span{
+        font-size:53px;
+        margin-left:23%;
+    }
+}
+@media screen and (min-width: 1081px) and (max-width: 1254px) {
+    #uptangIntro .company-profile{
+        /*字间距*/
+        letter-spacing:15px;
+    }
+    #uptangIntro .company-profile span{
+        font-size:45px;
+        margin-left:24%;
+    }
+}
+@media screen and (max-width: 1080px){
+    #uptangIntro .company-profile{
+        margin-top:0px !important;
+    }
+    #uptangIntro .company-profile{
+        /*字间距*/
+        letter-spacing:15px;
+    }
+    #uptangIntro .company-profile span{
+        font-size:35px;
+        margin-left:23.4%;
+    }
+    #uptangIntro .uptangCon p{
+        text-indent:1em !important;
+        font-size:.5em !important;
+    }
+    #uptangIntro .uptangCon .uptangMiddle{
+        margin-top:60px !important;
+    }
+    #uptangIntro .uptangCon .uptangRight{
+        margin-top:60px !important;
+    }
+}
+#uptangIntro .uptangCon div{
+    display:inline-block;
+}
+#uptangIntro .uptangCon p{
+    text-indent:1.8em;
+    font-size:.9em;
+}
+/*兴唐简介字体调整*/
+@media screen and (min-width: 1660px){
+    #uptangIntro .uptangCon p{
+        text-indent:2.4em;
+        font-size:1.2em;
+    }
+}
+@media screen and (min-width: 1440px) and (max-width:1659px){
+    #uptangIntro .uptangCon p{
+        text-indent:2em;
+        font-size:1em;
+    }
+}
+#uptangIntro .uptangMiddle,
+#uptangIntro .uptangRight{
+    text-align:left;
+}
+#uptangIntro .uptangCon .uptangLeft{
+    width:30%;
+    /*overflow: auto;*/
+    /*zoom:news1;*/
+}
+#uptangIntro .uptangCon .uptangLeft img{
+    width:100%;
+}
+#uptangIntro .uptangCon .uptangMiddle{
+    width:22%;
+    margin-left:2%;
+    margin-right:2%;
+    margin-top:100px;
+}
+#uptangIntro .uptangCon .uptangRight{
+    width:44%;
+    margin-top:100px;
+}
+/* 公司架构*/
+#uptangIntro .architecture{
+    /*width:100%;*/
+    height:796px;
+    /*background: url('../../../common/img/company_architecture.jpg') no-repeat;*/
+    background: url('../../../common/img/company_arch.jpg') no-repeat;
+    background-size: 100%;
+    padding-top:10px;
+    overflow: hidden;
+}
+@media screen and (min-width: 1500px){
+    #uptangIntro .company-profile span{
+        float:left;
+        color:#ECECEC;
+        font-size:53px;
+        margin-left:25%;
+    }
+}
+/*架构图*/
+#uptangIntro .arch-two{
+    height:674px;
+}
+#uptangIntro .arch-tw img{
+    height:100%;
+}
+
+
+
+
+/********轮播********/
+/*头部*/
+.header {
+    position: relative;
+    overflow: hidden;
+}
+/*轮播焦点*/
+.am-slider-default .am-control-nav {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+}
+
+.am-slider-default .am-control-nav li a {
+    width: 20px;
+    height: 6px;
+    border-radius: 0;
+    margin-top: -30px;
+}
+
+/*选中*/
+.am-slider-default .am-control-nav li a.am-active {
+    background-color: #f1f2f6;
+}
+
+/*未选中*/
+.am-slider-default .am-control-nav li a {
+    background-color: #1e2c6a;
+}
+
+.am-slider-default {
+    margin: 0;
+}
+
